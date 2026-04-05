@@ -14,17 +14,47 @@
 {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
-  "@id": "https://midlandsmedicare.com/#organization",
-  "name": "Midlands Medicare — Mauldin Insurance Group",
-  "url": "https://midlandsmedicare.com",
-  "logo": "https://midlandsmedicare.com/favicon.png",
-  "image": "https://midlandsmedicare.com/favicon.png",
-  "description": "Midlands Medicare is the Midlands-focused Medicare division of Mauldin Insurance Group, an independent insurance agency based in Lexington, SC. We help residents of Lexington, Columbia, Irmo, Chapin, Lake Murray, Cayce, and West Columbia navigate Medicare Advantage, Medicare Supplement, and Part D plans at no cost.",
+  "@id": "https://www.midlandsmedicare.com/#organization",
+  "name": "Mauldin Insurance Group",
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medicare Advantage Plans", "serviceType": "Medicare Advantage Insurance"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medicare Supplement Insurance (Medigap)", "serviceType": "Medicare Supplement Insurance"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medicare Part D Prescription Drug Plans", "serviceType": "Medicare Part D Insurance"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Annual Medicare Plan Reviews", "serviceType": "Medicare Insurance Review"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medicare Enrollment Assistance", "serviceType": "Medicare Enrollment Counseling"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Turning-65 Education and Guidance", "serviceType": "Medicare Turning 65 Counseling"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medicare Cost-Saving Strategies", "serviceType": "Medicare Financial Counseling"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Personalized Medicare Plan Comparisons", "serviceType": "Medicare Plan Comparison"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retirement Transition Planning", "serviceType": "Retirement Insurance Planning"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ACA Health Insurance", "serviceType": "ACA Marketplace Health Insurance"}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.midlandsmedicare.com/#organization",
+  "name": "Mauldin Insurance Group",
+  "url": "https://www.midlandsmedicare.com",
+  "logo": "https://irp.cdn-website.com/ed566c5d/dms3rep/multi/favicon.png",
+  "description": "Independent Medicare insurance agency serving the Midlands of South Carolina. Compare Medicare Advantage, Supplement, and Part D plans with a local Lexington SC agent.",
+  "founder": [
+    {"@type": "Person", "name": "Jennifer Mauldin"},
+    {"@type": "Person", "name": "Benjamin Mauldin"}
+  ],
   "foundingDate": "2021",
-  "telephone": "+18435092462",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "126",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "100 Old Cherokee Rd STE F #167",
+    "streetAddress": "100 Old Cherokee Rd Ste F #167",
     "addressLocality": "Lexington",
     "addressRegion": "SC",
     "postalCode": "29072",
@@ -35,140 +65,75 @@
     "latitude": 34.0033,
     "longitude": -81.1957
   },
+  "telephone": "+1-843-509-2462",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "$$",
   "areaServed": [
-    { "@type": "City", "name": "Lexington" },
-    { "@type": "City", "name": "Columbia" },
-    { "@type": "City", "name": "Irmo" },
-    { "@type": "City", "name": "Chapin" },
-    { "@type": "City", "name": "Cayce" },
-    { "@type": "City", "name": "West Columbia" },
-    { "@type": "City", "name": "Blythewood" },
-    { "@type": "State", "name": "South Carolina" }
+    {"@type": "City", "name": "Lexington"},
+    {"@type": "City", "name": "Columbia"},
+    {"@type": "City", "name": "West Columbia"},
+    {"@type": "City", "name": "Irmo"},
+    {"@type": "City", "name": "Chapin"},
+    {"@type": "City", "name": "Cayce"},
+    {"@type": "State", "name": "South Carolina"}
   ],
-  "founder": [
-    { "@type": "Person", "name": "Jennifer Mauldin" },
-    { "@type": "Person", "name": "Benjamin Mauldin" }
-  ],
-  "employee": {
-    "@type": "Person",
-    "name": "Jennifer Mauldin",
-    "telephone": "+18435092462",
-    "email": "jennifer@mauldininsurancegroup.com"
-  },
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "+18435092462",
-    "contactType": "customer service",
-    "name": "Jennifer Mauldin",
-    "areaServed": "US",
-    "availableLanguage": ["English"]
-  }],
-  "serviceType": ["Medicare Advantage", "Medicare Supplement", "Medicare Part D", "ACA Health Insurance", "Life Insurance", "Final Expense Insurance"],
   "sameAs": [
+    "https://www.google.com/maps?cid=14600299182979997294",
+    "https://www.facebook.com/mauldininsurancegroup",
     "https://www.mauldininsurancegroup.com",
     "https://www.mauldininsurance.com",
-    "https://www.southcarolinamedicareagency.com",
-    "https://www.facebook.com/MauldinInsuranceGroup",
-    "https://www.google.com/maps?cid=14600299182979997294"
-  ],
-  "parentOrganization": {
-    "@type": "Organization",
-    "@id": "https://www.mauldininsurancegroup.com/#organization",
-    "name": "Mauldin Insurance Group",
-    "url": "https://www.mauldininsurancegroup.com"
-  }
+    "https://www.southcarolinamedicareagency.com"
+  ]
 }
 </script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@type": "WebSite",
+  "name": "Midlands Medicare",
+  "@id": "https://www.midlandsmedicare.com/#website",
+  "url": "https://www.midlandsmedicare.com",
+  "description": "Midlands Medicare helps Lexington, Columbia, and Midlands SC residents compare Medicare Advantage, Supplement, and Part D plans with a local independent agent.",
+  "publisher": {"@id": "https://www.midlandsmedicare.com/#organization"},
+  "inLanguage": "en"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "What is Midlands Medicare?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Midlands Medicare is the local Medicare division of Mauldin Insurance Group, an independent insurance agency based in Lexington, SC. We specialize in helping residents of the SC Midlands — Lexington, Columbia, Irmo, Chapin, Lake Murray, Cayce, West Columbia, and Blythewood — find the right Medicare coverage at no cost. We compare multiple carriers side by side and guide you through every step of the enrollment process."
-      }
+      "@type": "Person",
+      "name": "Jennifer Mauldin",
+      "jobTitle": "Medicare & Health Insurance Specialist",
+      "worksFor": {"@id": "https://www.midlandsmedicare.com/#organization"},
+      "telephone": "+1-843-509-2462",
+      "email": "jennifer@mauldininsurancegroup.com",
+      "url": "https://www.mauldininsurancegroup.com/about",
+      "sameAs": ["https://www.linkedin.com/in/jennifer-williams-mauldin-58133029/"]
     },
     {
-      "@type": "Question",
-      "name": "Which Midlands communities do you serve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We serve all communities across the SC Midlands including Lexington, Columbia, Irmo, Chapin, Lake Murray, Cayce, West Columbia, Blythewood, Batesburg-Leesville, Gilbert, Pelion, Gaston, Swansea, and surrounding areas. We meet clients in-person, by phone, or by video — whichever is most convenient for you."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What Medicare plans are available in Lexington and Columbia, SC?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Residents of Lexington and Columbia, SC have access to a wide range of Medicare options. We currently represent 6 organizations offering 52 products in our service area, including Medicare Advantage plans, Medicare Supplement plans (Plan G and Plan N are the most popular for new enrollees), and Part D prescription drug plans. We compare every option available in your specific zip code and help you choose the best fit for your doctors, medications, and budget."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "I am turning 65 in the Midlands — where do I start with Medicare?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start by calling us at (843) 509-2462 — ideally at least 3 to 4 months before your 65th birthday. Your Initial Enrollment Period is a 7-month window centered on your birthday month. We will walk you through your eligibility, help you understand Part A and Part B, and compare every Medicare Advantage, Medicare Supplement, and Part D option available in Lexington County and Richland County at no cost to you."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a Medicare agent near Lake Murray, SC?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — Mauldin Insurance Group is based right in Lexington, SC, just minutes from Lake Murray. Jennifer Mauldin regularly meets with clients throughout the Lake Murray area including Chapin, Lexington, and Irmo. We can meet in person, by phone, or by video at a time that works for you. Call (843) 509-2462 to schedule your free Medicare review."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between Medicare Advantage and Medicare Supplement in South Carolina?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Medicare Advantage (Part C) replaces Original Medicare with an all-in-one private plan that typically includes drug coverage and extra benefits like dental and vision, often with low or $0 monthly premiums. However, it uses provider networks — so your doctors must be in-network. Medicare Supplement (Medigap) works alongside Original Medicare, covering the 20% coinsurance and other gaps. It has a monthly premium but lets you see any Medicare-accepting doctor nationwide with very predictable costs. The right choice depends on your health, your doctors, and your budget — and we help you figure that out for free."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it cost anything to use a Medicare agent in the Midlands?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No — our services are completely free to you. Insurance carriers pay agents a commission when you enroll in a plan. Your monthly premium is exactly the same whether you enroll through us or go directly to the carrier. You get experienced, local guidance from someone who knows the Midlands market at zero extra cost."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I switch Medicare plans if I am unhappy with my current coverage?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — Medicare Annual Enrollment Period runs October 15 through December 7 every year. During this window you can switch Medicare Advantage plans, switch from Medicare Advantage back to Original Medicare, or change your Part D drug plan. Medicare Advantage also has an Open Enrollment Period January 1 through March 31 where you can make one plan change. We review your plan every year at no charge and proactively reach out if we find you a better option."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "I just moved to the SC Midlands. Do I need to change my Medicare plan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Possibly — and it may be time-sensitive. If you had a Medicare Advantage plan in your previous state, it likely has no in-network providers in the Midlands. Moving to a new area triggers a Special Enrollment Period, but you typically only have 60 days from your move date to act. Call us at (843) 509-2462 as soon as possible to review your options and avoid any gap in coverage."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is Medicare Part D and do I need it in South Carolina?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Medicare Part D covers prescription drugs. If you are on Original Medicare, you should enroll in a standalone Part D plan when you first become eligible to avoid a permanent late enrollment penalty — even if you take few or no medications currently. If you choose a Medicare Advantage plan, drug coverage is usually included. We compare Part D formularies across all available carriers in the Midlands to find the plan that best matches your specific medications and preferred pharmacies."
-      }
+      "@type": "Person",
+      "name": "Ben Mauldin",
+      "jobTitle": "Independent Insurance Agent",
+      "worksFor": {"@id": "https://www.midlandsmedicare.com/#organization"},
+      "telephone": "+1-803-920-8827",
+      "email": "ben@mauldininsurancegroup.com",
+      "url": "https://www.mauldininsurancegroup.com/about",
+      "sameAs": ["https://www.linkedin.com/in/ben-mauldin/"]
     }
   ]
 }
 </script>
-
 <style>
 :root {
   --navy: #1a2e5a;
