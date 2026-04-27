@@ -22,14 +22,14 @@
       --teal: #0e7490;
       --teal-light: #155e75;
       --gold: #c9a227;
-      --off-white: #f0f7f9;   /* teal-tinted off-white vs SCMA's warm #f8f6f0 */
+      --off-white: #f0f7f9;
       --hero-bg: linear-gradient(160deg, #061e2f 0%, #0c3248 45%, #0e5068 100%);
     }
     * { box-sizing: border-box }
     body { margin: 0; font-family: 'Source Sans 3', sans-serif; color: #222; background: white }
     h1,h2,h3 { font-family: 'Playfair Display', serif }
 
-    /* ── HERO — darker teal-blue vs SCMA navy ── */
+    /* ── HERO ── */
     .hero {
       background: var(--hero-bg);
       color: white;
@@ -38,7 +38,6 @@
       position: relative;
       overflow: hidden;
     }
-    /* Lake Murray water texture overlay */
     .hero::before {
       content: '';
       position: absolute;
@@ -80,15 +79,33 @@
       margin: 0 0 20px;
     }
     .hero p { font-size: 17px; color: rgba(255,255,255,0.82); margin: 0 auto 32px; max-width: 580px; line-height: 1.65 }
-    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px }
     .btn-teal { background: #0e7490; color: white; text-decoration: none; font-weight: 700; padding: 14px 28px; border-radius: 6px; font-size: 15px; transition: background .2s; display: inline-block; border: 2px solid #0e7490 }
     .btn-teal:hover { background: #0c6377 }
     .btn-outline { border: 2px solid rgba(255,255,255,0.55); color: white; text-decoration: none; font-weight: 600; padding: 13px 26px; border-radius: 6px; font-size: 15px; transition: all .2s; display: inline-block }
     .btn-outline:hover { border-color: #67e8f9; color: #67e8f9 }
+    .btn-quiz-hero {
+      border: 2px solid rgba(103,232,249,0.5);
+      color: #67e8f9;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 13px 26px;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: all .2s;
+      display: inline-block;
+      background: rgba(14,116,144,0.2);
+    }
+    .btn-quiz-hero:hover { background: rgba(14,116,144,0.4); border-color: #67e8f9 }
+    .hero-quiz-nudge {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      margin: 0 0 20px;
+    }
     .hero-trust { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap }
     .hero-trust-item { font-size: 13px; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 6px }
 
-    /* ── ZIP STRIP — unique to Midlands ── */
+    /* ── ZIP STRIP ── */
     .zip-strip {
       background: #0c3248;
       border-top: 1px solid rgba(14,116,144,0.4);
@@ -100,11 +117,96 @@
     .zip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #67e8f9; margin-right: 4px }
     .zip-tag { font-size: 12px; color: rgba(255,255,255,0.55); padding: 3px 10px; border: 1px solid rgba(14,116,144,0.4); border-radius: 10px }
 
-    /* ── STAT BAND — Midlands identity ── */
+    /* ── STAT BAND ── */
     .stat-band { background: #0c3248; color: white; padding: 36px 20px }
     .stat-band-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 24px; text-align: center }
     .stat-num { font-family: 'Playfair Display',serif; font-size: clamp(26px,4vw,40px); color: #67e8f9; margin-bottom: 6px; display: block }
     .stat-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.5 }
+
+    /* ── QUIZ PROMO BAND ── */
+    .quiz-band {
+      background: linear-gradient(135deg, #0a3d2e 0%, #0e5a40 100%);
+      padding: 52px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .quiz-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 80% at 50% 120%, rgba(14,116,144,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .quiz-band-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+    .quiz-band-eyebrow {
+      display: inline-block;
+      background: rgba(103,232,249,0.12);
+      border: 1px solid rgba(103,232,249,0.3);
+      color: #67e8f9;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .quiz-band h2 {
+      font-size: clamp(22px,3.5vw,34px);
+      color: white;
+      margin: 0 0 14px;
+      line-height: 1.2;
+    }
+    .quiz-band h2 em { color: #67e8f9; font-style: normal }
+    .quiz-band p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.72);
+      margin: 0 auto 28px;
+      max-width: 540px;
+      line-height: 1.65;
+    }
+    .quiz-band-stats {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .quiz-band-stat {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+    .quiz-band-stat-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #67e8f9;
+      flex-shrink: 0;
+    }
+    .btn-quiz-band {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0e7490;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 15px 32px;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background .2s, transform .15s;
+      border: 2px solid #0e7490;
+      box-shadow: 0 4px 20px rgba(14,116,144,0.4);
+    }
+    .btn-quiz-band:hover { background: #0c6377; border-color: #0c6377; transform: translateY(-1px) }
+    .quiz-band-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+    }
 
     /* ── SECTIONS ── */
     section { padding: 64px 20px }
@@ -114,7 +216,7 @@
     .section-sub { text-align: center; color: #666; font-size: 17px; margin: 0 auto 44px; max-width: 600px; line-height: 1.6 }
     .alt-bg { background: var(--off-white) }
 
-    /* ── AREA CARDS — prominent, above plans ── */
+    /* ── AREA CARDS ── */
     .areas-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 14px }
     .area-card {
       background: white;
@@ -158,7 +260,7 @@
     .why-item h3 { font-size: 17px; color: var(--navy); margin: 0 0 10px }
     .why-item p { font-size: 14px; color: #555; line-height: 1.6; margin: 0 }
 
-    /* ── LAKE MURRAY FEATURE BAND ── */
+    /* ── LAKE MURRAY BAND ── */
     .lake-band {
       background: linear-gradient(135deg, #0c3248 0%, #0e5068 100%);
       color: white;
@@ -249,8 +351,10 @@
     <p>We are your neighbors. Independent Medicare agents based right here in the Midlands — comparing every plan available in your zip code at no cost, with no pressure.</p>
     <div class="hero-btns">
       <a href="tel:+18435092462" class="btn-teal">📞 Call Jennifer — 843-509-2462</a>
+      <a href="/quiz.html" class="btn-quiz-hero">📋 Free Medicare Quiz</a>
       <a href="https://www.mauldininsurancegroup.com/contact" class="btn-outline" target="_blank">Free Consultation</a>
     </div>
+    <p class="hero-quiz-nudge">Not sure if your coverage has gaps? Take our 3-minute self-assessment →</p>
     <div class="hero-trust">
       <span class="hero-trust-item">⭐ 5.0 Google Rating (131 reviews)</span>
       <span class="hero-trust-item">📍 100 Old Cherokee Rd, Lexington SC</span>
@@ -286,7 +390,27 @@
   </div>
 </div>
 
-<!-- LOCAL AREAS — prominent, first section -->
+<!-- QUIZ PROMO BAND -->
+<div class="quiz-band">
+  <div class="quiz-band-inner">
+    <div class="quiz-band-eyebrow">Free · 3 Minutes · No Obligation</div>
+    <h2>Will Medicare Leave You <em>Exposed?</em></h2>
+    <p>Most Lexington and Lake Murray seniors don't realize Original Medicare has no out-of-pocket limit. One hospital stay or cancer diagnosis could cost $20,000 to $60,000 or more. Take our free quiz to find out where your coverage actually stands.</p>
+    <div class="quiz-band-stats">
+      <div class="quiz-band-stat"><div class="quiz-band-stat-dot"></div>13 questions</div>
+      <div class="quiz-band-stat"><div class="quiz-band-stat-dot"></div>Personalized risk score</div>
+      <div class="quiz-band-stat"><div class="quiz-band-stat-dot"></div>Free & confidential</div>
+      <div class="quiz-band-stat"><div class="quiz-band-stat-dot"></div>No sales pressure</div>
+    </div>
+    <a href="/quiz.html" class="btn-quiz-band">
+      Take the Free Medicare Quiz
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <p class="quiz-band-note">Takes about 3 minutes. Jennifer will personally follow up if you have questions.</p>
+  </div>
+</div>
+
+<!-- LOCAL AREAS -->
 <section>
   <div class="section-inner">
     <p class="section-label">Your Community</p>
@@ -333,7 +457,7 @@
   </div>
 </section>
 
-<!-- LAKE MURRAY FEATURE BAND -->
+<!-- LAKE MURRAY BAND -->
 <div class="lake-band">
   <h2>Serving <em>Lake Murray</em> and the Entire SC Midlands</h2>
   <p>From Chapin and Irmo on Lake Murray's shores to downtown Columbia and Lexington's growing communities — we know this area because we live here. When you call us, you reach a local agent who knows your neighborhood, your doctors, and your community.</p>
@@ -442,7 +566,7 @@
   </div>
 </section>
 
-<!-- BLOG RESOURCES -->
+<!-- BLOG -->
 <section>
   <div class="section-inner">
     <p class="section-label">Resources &amp; Guides</p>
@@ -465,6 +589,7 @@
   <p>Call Jennifer or schedule a free consultation. We compare every plan available in your zip code — right here from Lexington, at no cost to you.</p>
   <div class="cta-options">
     <a href="tel:+18435092462" class="btn-teal" style="font-size:16px;padding:16px 32px;">📞 Call 843-509-2462</a>
+    <a href="/quiz.html" class="btn-quiz-hero" style="font-size:15px;padding:15px 28px;">📋 Free Medicare Quiz</a>
     <a href="https://www.mauldininsurancegroup.com/contact" class="btn-outline" target="_blank" style="font-size:15px;padding:15px 28px;">Schedule Free Medicare Review</a>
   </div>
   <p class="cta-note">Jennifer Mauldin &nbsp;|&nbsp; 843-509-2462 &nbsp;|&nbsp; 100 Old Cherokee Rd, Lexington SC 29072</p>
