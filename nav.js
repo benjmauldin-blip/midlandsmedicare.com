@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="/midlands-service-areas.html" class="nav-link">Service Areas</a>
         <a href="https://www.mauldininsurancegroup.com" class="nav-link" target="_blank">MIG Website</a>
         <a href="tel:+18435092462" class="nav-phone">843-509-2462</a>
+        <a href="/quiz.html" class="nav-quiz">Free Medicare Quiz</a>
         <a href="https://www.mauldininsurancegroup.com/contact" class="nav-cta" target="_blank">Free Consultation</a>
       </div>
     </div>
@@ -72,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .nav-drop-menu a{display:block;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none;padding:8px 16px;transition:all .2s;font-family:'Source Sans 3',sans-serif}
     .nav-drop-menu a:hover{background:rgba(201,162,39,.1);color:#c9a227}
     .nav-phone{font-size:13px;font-weight:700;color:#c9a227;text-decoration:none;padding:6px 10px;font-family:'Source Sans 3',sans-serif}
+    .nav-quiz{background:rgba(14,116,144,0.25);border:1px solid rgba(103,232,249,0.4);color:#67e8f9;text-decoration:none;font-weight:700;padding:7px 14px;border-radius:6px;font-size:13px;transition:all .2s;font-family:'Source Sans 3',sans-serif;white-space:nowrap}
+    .nav-quiz:hover{background:rgba(14,116,144,0.45);border-color:#67e8f9}
     .nav-cta{background:#c9a227;color:#1a2e5a;text-decoration:none;font-weight:700;padding:8px 16px;border-radius:6px;font-size:13px;transition:background .2s;font-family:'Source Sans 3',sans-serif;white-space:nowrap}
     .nav-cta:hover{background:#e0b82d}
     .nav-toggle{display:none;background:none;border:none;color:white;font-size:22px;cursor:pointer;padding:4px 8px}
@@ -83,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .nav-drop-menu{position:static;display:none;box-shadow:none;border:none;padding:0 0 0 16px;background:transparent}
       .nav-dropdown.open .nav-drop-menu{display:block}
       .nav-drop-btn{padding:8px 0}
+      .nav-quiz{align-self:flex-start}
     }
   </style>`;
 
