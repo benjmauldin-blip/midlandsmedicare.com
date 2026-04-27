@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Will Medicare Leave You Exposed? | Free Self-Assessment | Midlands Medicare</title>
-<meta name="description" content="Take this free 3-minute Medicare self-assessment designed for seniors in Lexington, Lake Murray, Irmo, and Chapin, SC. Find out if your coverage has dangerous gaps.">
-<meta name="keywords" content="Medicare Lexington SC, Medicare Lake Murray, Medicare Irmo SC, Medicare Supplement South Carolina, Mauldin Insurance Group, Midlands Medicare">
+<meta name="description" content="Take this free Medicare self-assessment for seniors in Lexington, Lake Murray, Irmo, and Chapin, SC. Covers Original Medicare, Medigap, and Medicare Advantage gaps.">
 <meta property="og:title" content="Will Medicare Leave You Exposed? | Free SC Medicare Self-Assessment">
-<meta property="og:description" content="A free 3-minute quiz for South Carolina seniors in the Lexington, Lake Murray, and Irmo area. Find out if your Medicare coverage has gaps that could cost you thousands.">
+<meta property="og:description" content="A free branching Medicare quiz for South Carolina seniors — personalized by your plan type.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://midlandsmedicare.com/quiz">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,109 +15,84 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;line-height:1.6;min-height:100vh;}
+body{font-family:"Inter",system-ui,sans-serif;background:#f5f7fa;color:#1a2332;line-height:1.6;min-height:100vh;}
 :root{
   --navy:#0d2137;--navy-mid:#163352;--navy-light:#1e4976;
   --teal:#1a8a72;--teal-light:#e6f5f2;--teal-mid:#147a64;
-  --blue:#1d6fa4;--blue-light:#e8f3fb;
   --white:#ffffff;
   --gray-100:#f5f7fa;--gray-200:#eaecf0;--gray-300:#d0d5dd;
   --gray-500:#667085;--gray-700:#344054;
   --green:#1a6b3a;--green-light:#eaf4ee;
   --amber:#92520a;--amber-light:#fdf3e3;
   --red:#8b1f1f;--red-light:#faeaea;
-  --border:rgba(13,33,55,0.10);--border-mid:rgba(13,33,55,0.20);
-  --shadow:0 2px 16px rgba(13,33,55,0.08);--shadow-lg:0 6px 40px rgba(13,33,55,0.12);
+  --shadow-lg:0 6px 40px rgba(13,33,55,0.12);
   --radius:10px;--radius-lg:14px;
 }
-
-/* HEADER */
-.site-header{background:var(--navy);padding:0 1.5rem;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
-.header-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:'Merriweather',serif;font-size:1rem;font-weight:700;}
-.header-logo-sub{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:400;color:rgba(255,255,255,0.5);letter-spacing:0.04em;text-transform:uppercase;display:block;line-height:1;}
-.header-right{display:flex;align-items:center;gap:1rem;}
-.header-phone{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color 0.15s;}
-.header-phone:hover{color:#fff;}
-.header-cta{display:inline-flex;align-items:center;background:var(--teal);color:#fff;border-radius:6px;padding:0.4rem 0.9rem;font-size:0.82rem;font-weight:600;text-decoration:none;transition:background 0.15s;white-space:nowrap;}
-.header-cta:hover{background:var(--teal-mid);}
-@media(max-width:540px){.header-cta{display:none;}}
-
-/* BREADCRUMB */
 .breadcrumb{background:var(--navy-mid);padding:0.45rem 1.5rem;display:flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.45);}
 .breadcrumb a{color:rgba(255,255,255,0.55);text-decoration:none;}
 .breadcrumb a:hover{color:rgba(255,255,255,0.9);}
-
-/* HERO */
 .hero{background:var(--navy);padding:3.5rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden;}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:#f5f7fa;clip-path:ellipse(55% 100% at 50% 100%);}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:56px;background:#f5f7fa;clip-path:ellipse(55% 100% at 50% 100%);}
 .hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(26,138,114,0.18);border:1px solid rgba(26,138,114,0.32);color:#5dd6be;border-radius:999px;padding:0.28rem 0.9rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.1rem;}
-.hero h1{font-family:'Merriweather',serif;color:#fff;font-size:clamp(1.8rem,4.5vw,2.85rem);line-height:1.2;margin-bottom:1rem;font-weight:700;}
+.hero h1{font-family:"Merriweather",serif;color:#fff;font-size:clamp(1.8rem,4.5vw,2.85rem);line-height:1.2;margin-bottom:1rem;font-weight:700;}
 .hero h1 em{font-style:italic;color:#5dd6be;}
-.hero-sub{color:rgba(255,255,255,0.68);font-size:0.97rem;max-width:490px;margin:0 auto 1.6rem;line-height:1.7;}
+.hero-sub{color:rgba(255,255,255,0.68);font-size:0.97rem;max-width:500px;margin:0 auto 1.6rem;line-height:1.7;}
 .hero-pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:1.75rem;}
 .hero-pill{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.14);color:rgba(255,255,255,0.72);border-radius:999px;padding:0.26rem 0.75rem;font-size:0.75rem;}
-.btn-hero{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;border:none;border-radius:8px;padding:0.85rem 1.9rem;font-family:'Inter',sans-serif;font-size:0.97rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background 0.2s,transform 0.15s;box-shadow:0 4px 18px rgba(26,138,114,0.35);}
+.btn-hero{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;border:none;border-radius:8px;padding:0.85rem 1.9rem;font-family:"Inter",sans-serif;font-size:0.97rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background 0.2s,transform 0.15s;box-shadow:0 4px 18px rgba(26,138,114,0.35);}
 .btn-hero:hover{background:var(--teal-mid);transform:translateY(-1px);}
 .hero-trust{margin-top:1.35rem;color:rgba(255,255,255,0.35);font-size:0.72rem;letter-spacing:0.03em;}
 .hero-rating{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:0.5rem;color:rgba(255,255,255,0.45);font-size:0.75rem;}
 .stars{color:#f5c842;font-size:0.82rem;letter-spacing:1px;}
-
-/* SCENARIOS */
-.scenarios{background:#fff;border-bottom:1px solid var(--gray-200);padding:2.25rem 1.5rem;}
-.scenarios-inner{max-width:820px;margin:0 auto;}
+/* PATH CARDS */
+.paths-section{background:#fff;border-bottom:1px solid var(--gray-200);padding:2.25rem 1.5rem;}
+.paths-inner{max-width:820px;margin:0 auto;}
 .section-label{text-align:center;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:1.1rem;}
-.scenarios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px;}
-.scenario-card{background:var(--gray-100);border:1px solid var(--gray-200);border-top:3px solid var(--red);border-radius:var(--radius);padding:1.1rem;}
-.sc-icon{font-size:1.25rem;margin-bottom:0.45rem;display:block;}
-.sc-name{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray-500);margin-bottom:0.3rem;}
-.sc-desc{font-size:0.83rem;color:var(--gray-700);line-height:1.5;margin-bottom:0.55rem;}
-.sc-cost{font-size:0.9rem;font-weight:700;color:var(--red);}
-
-/* QUIZ CARD */
+.paths-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:11px;}
+.path-card{background:var(--gray-100);border:1px solid var(--gray-200);border-top:3px solid var(--teal);border-radius:var(--radius);padding:1rem;}
+.path-card-icon{font-size:1.3rem;margin-bottom:0.4rem;display:block;}
+.path-card-name{font-size:0.75rem;font-weight:700;color:var(--navy);margin-bottom:0.25rem;}
+.path-card-desc{font-size:0.78rem;color:var(--gray-500);line-height:1.45;}
+/* QUIZ */
 .quiz-section{padding:2.25rem 1.25rem 3.5rem;max-width:640px;margin:0 auto;}
 .quiz-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);overflow:hidden;}
 .quiz-card-hd{background:var(--navy);padding:0.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-.quiz-card-hd-title{font-family:'Merriweather',serif;color:#fff;font-size:0.97rem;font-weight:700;}
-.quiz-badge{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-radius:999px;padding:0.2rem 0.65rem;font-size:0.7rem;font-weight:600;white-space:nowrap;}
+.quiz-card-hd-title{font-family:"Merriweather",serif;color:#fff;font-size:0.97rem;font-weight:700;}
+.quiz-badge{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);border-radius:999px;padding:0.2rem 0.65rem;font-size:0.7rem;font-weight:600;white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis;}
 .progress-track{height:4px;background:var(--gray-200);}
 .progress-fill{height:4px;background:var(--teal);transition:width 0.45s cubic-bezier(.4,0,.2,1);width:0%;}
-
-/* INTRO */
+.path-label{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--teal-light);color:var(--teal);padding:0.35rem 1.5rem;display:none;}
 #intro-block{padding:1.75rem 1.5rem;}
 .intro-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.45rem;}
-.intro-title{font-family:'Merriweather',serif;font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:0.55rem;line-height:1.3;}
+.intro-title{font-family:"Merriweather",serif;font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:0.55rem;line-height:1.3;}
 .intro-body{font-size:0.9rem;color:var(--gray-700);line-height:1.65;margin-bottom:1rem;}
 .intro-checklist{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:1.1rem;}
 .intro-checklist li{display:flex;align-items:flex-start;gap:9px;font-size:0.87rem;color:var(--gray-700);}
 .chk{width:17px;height:17px;background:var(--teal-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;}
 .intro-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.2rem;}
 .intro-pill{background:var(--gray-100);border:1px solid var(--gray-200);border-radius:999px;padding:0.26rem 0.75rem;font-size:0.74rem;color:var(--gray-500);}
-.btn-start{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:#fff;border:none;border-radius:8px;padding:0.88rem;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:background 0.2s;box-shadow:0 3px 12px rgba(26,138,114,0.28);}
+.btn-start{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:#fff;border:none;border-radius:8px;padding:0.88rem;font-family:"Inter",sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:background 0.2s;box-shadow:0 3px 12px rgba(26,138,114,0.28);}
 .btn-start:hover{background:var(--teal-mid);}
-
-/* QUESTION */
 .quiz-body{padding:1.75rem 1.5rem;}
 .q-number{font-size:0.67rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.45rem;}
-.q-text{font-family:'Merriweather',serif;font-size:1.1rem;font-weight:400;color:var(--navy);line-height:1.45;margin-bottom:1.4rem;}
+.q-text{font-family:"Merriweather",serif;font-size:1.1rem;font-weight:400;color:var(--navy);line-height:1.45;margin-bottom:1.4rem;}
 .choices{display:flex;flex-direction:column;gap:8px;}
-.choice-btn{display:flex;align-items:flex-start;gap:10px;padding:0.78rem 0.9rem;background:var(--gray-100);border:1.5px solid var(--gray-200);border-radius:8px;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;font-size:0.89rem;color:var(--gray-700);line-height:1.45;transition:all 0.15s;width:100%;}
+.choice-btn{display:flex;align-items:flex-start;gap:10px;padding:0.78rem 0.9rem;background:var(--gray-100);border:1.5px solid var(--gray-200);border-radius:8px;cursor:pointer;text-align:left;font-family:"Inter",sans-serif;font-size:0.89rem;color:var(--gray-700);line-height:1.45;transition:all 0.15s;width:100%;}
 .choice-btn:hover{background:var(--teal-light);border-color:var(--teal);color:var(--navy);}
 .choice-btn.selected{background:var(--teal-light);border-color:var(--teal);color:var(--navy);}
 .choice-letter{display:flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:5px;background:#fff;border:1px solid var(--gray-300);font-size:0.7rem;font-weight:700;color:var(--gray-500);flex-shrink:0;margin-top:1px;transition:all 0.15s;}
 .choice-btn.selected .choice-letter{background:var(--teal);color:#fff;border-color:var(--teal);}
 .quiz-nav{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 1.5rem 1.4rem;border-top:1px solid var(--gray-200);}
-.btn-back{background:transparent;border:1.5px solid var(--gray-300);border-radius:7px;padding:0.55rem 1.1rem;font-family:'Inter',sans-serif;font-size:0.84rem;color:var(--gray-500);cursor:pointer;transition:all 0.15s;}
+.btn-back{background:transparent;border:1.5px solid var(--gray-300);border-radius:7px;padding:0.55rem 1.1rem;font-family:"Inter",sans-serif;font-size:0.84rem;color:var(--gray-500);cursor:pointer;transition:all 0.15s;}
 .btn-back:hover{background:var(--gray-100);}
 .btn-back:disabled{opacity:0.3;cursor:not-allowed;}
-.btn-next{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;border:none;border-radius:7px;padding:0.62rem 1.3rem;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:background 0.2s,opacity 0.2s;}
+.btn-next{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;border:none;border-radius:7px;padding:0.62rem 1.3rem;font-family:"Inter",sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:background 0.2s,opacity 0.2s;}
 .btn-next:hover{background:var(--navy-mid);}
 .btn-next:disabled{opacity:0.35;cursor:not-allowed;}
-
-/* GATE */
 #gate-block{padding:1.75rem 1.5rem;}
 .gate-eyebrow{font-size:0.67rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.45rem;}
-.gate-title{font-family:'Merriweather',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;}
+.gate-title{font-family:"Merriweather",serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;}
 .gate-sub{font-size:0.87rem;color:var(--gray-700);line-height:1.62;margin-bottom:1.1rem;}
 .gate-score-preview{display:flex;align-items:center;gap:11px;background:var(--navy);border-radius:8px;padding:0.85rem 1rem;margin-bottom:1.2rem;}
 .gate-lock{width:34px;height:34px;background:rgba(255,255,255,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -127,24 +101,22 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
 .gate-fields{display:flex;flex-direction:column;gap:10px;margin-bottom:0.9rem;}
 .gate-field{display:flex;flex-direction:column;gap:3px;}
 .gate-label{font-size:0.7rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--gray-700);}
-.gate-input{width:100%;padding:0.62rem 0.82rem;border:1.5px solid var(--gray-300);border-radius:7px;font-family:'Inter',sans-serif;font-size:0.94rem;color:var(--navy);background:#fff;outline:none;transition:border-color 0.15s;}
+.gate-input{width:100%;padding:0.62rem 0.82rem;border:1.5px solid var(--gray-300);border-radius:7px;font-family:"Inter",sans-serif;font-size:0.94rem;color:var(--navy);background:#fff;outline:none;transition:border-color 0.15s;}
 .gate-input:focus{border-color:var(--teal);}
 .gate-input.error{border-color:var(--red);}
 .gate-err{font-size:0.7rem;color:var(--red);display:none;}
 .gate-err.show{display:block;}
 .gate-disclaimer{font-size:0.7rem;color:var(--gray-500);line-height:1.55;margin-bottom:1rem;}
-.btn-gate{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:#fff;border:none;border-radius:8px;padding:0.88rem;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:background 0.2s;box-shadow:0 3px 12px rgba(26,138,114,0.28);}
+.btn-gate{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:#fff;border:none;border-radius:8px;padding:0.88rem;font-family:"Inter",sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:background 0.2s;box-shadow:0 3px 12px rgba(26,138,114,0.28);}
 .btn-gate:hover{background:var(--teal-mid);}
 .btn-gate:disabled{opacity:0.5;cursor:not-allowed;}
 .gate-spinner{display:none;}
-
-/* RESULTS */
 .result-wrap{padding:1.75rem 1.5rem;}
 .result-badge{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:0.28rem 0.85rem;font-size:0.68rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:0.75rem;}
 .badge-low{background:var(--green-light);color:var(--green);}
 .badge-mod{background:var(--amber-light);color:var(--amber);}
 .badge-high{background:var(--red-light);color:var(--red);}
-.result-headline{font-family:'Merriweather',serif;font-size:1.38rem;font-weight:700;color:var(--navy);line-height:1.25;margin-bottom:1rem;}
+.result-headline{font-family:"Merriweather",serif;font-size:1.38rem;font-weight:700;color:var(--navy);line-height:1.25;margin-bottom:1rem;}
 .score-row{display:flex;align-items:center;gap:1rem;background:var(--gray-100);border:1px solid var(--gray-200);border-radius:10px;padding:0.85rem 1rem;margin-bottom:1.15rem;}
 .score-ring-wrap{flex-shrink:0;width:64px;height:64px;}
 .score-ring-svg{width:64px;height:64px;transform:rotate(-90deg);}
@@ -152,7 +124,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
 .ring-fill{fill:none;stroke-width:6;stroke-linecap:round;transition:stroke-dashoffset 1.1s cubic-bezier(.4,0,.2,1);}
 .score-meta{flex:1;}
 .score-label{font-size:0.68rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px;}
-.score-num{font-family:'Merriweather',serif;font-size:1.3rem;color:var(--navy);font-weight:700;}
+.score-num{font-family:"Merriweather",serif;font-size:1.3rem;color:var(--navy);font-weight:700;}
 .score-sub{font-size:0.72rem;color:var(--gray-500);margin-top:2px;}
 .result-body{font-size:0.9rem;color:var(--gray-700);line-height:1.72;margin-bottom:1.15rem;}
 .result-body p{margin-bottom:0.75rem;}
@@ -165,7 +137,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
 .rs-desc{font-size:0.8rem;color:var(--gray-700);margin-bottom:3px;line-height:1.45;}
 .rs-cost{font-size:0.86rem;font-weight:700;color:var(--red);}
 .cta-box{background:var(--navy);border-radius:12px;padding:1.4rem;text-align:center;}
-.cta-headline{font-family:'Merriweather',serif;font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.55rem;line-height:1.3;}
+.cta-headline{font-family:"Merriweather",serif;font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.55rem;line-height:1.3;}
 .cta-sub{color:rgba(255,255,255,0.62);font-size:0.83rem;line-height:1.65;margin-bottom:1.1rem;}
 .cta-agent{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.07);border-radius:8px;padding:0.7rem 0.9rem;margin-bottom:1.1rem;text-align:left;}
 .cta-agent-avatar{width:40px;height:40px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;}
@@ -173,73 +145,47 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
 .cta-agent-name{font-size:0.87rem;font-weight:600;color:#fff;}
 .cta-agent-title{font-size:0.73rem;color:rgba(255,255,255,0.52);}
 .cta-btns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
-.btn-cta-primary{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;border:none;border-radius:7px;padding:0.72rem 1.3rem;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background 0.2s;box-shadow:0 3px 10px rgba(26,138,114,0.3);}
+.btn-cta-primary{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;border:none;border-radius:7px;padding:0.72rem 1.3rem;font-family:"Inter",sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background 0.2s;}
 .btn-cta-primary:hover{background:var(--teal-mid);}
-.btn-cta-secondary{display:inline-flex;align-items:center;gap:5px;background:transparent;color:rgba(255,255,255,0.78);border:1.5px solid rgba(255,255,255,0.22);border-radius:7px;padding:0.72rem 1.3rem;font-family:'Inter',sans-serif;font-size:0.9rem;cursor:pointer;text-decoration:none;transition:all 0.2s;}
+.btn-cta-secondary{display:inline-flex;align-items:center;gap:5px;background:transparent;color:rgba(255,255,255,0.78);border:1.5px solid rgba(255,255,255,0.22);border-radius:7px;padding:0.72rem 1.3rem;font-family:"Inter",sans-serif;font-size:0.9rem;cursor:pointer;text-decoration:none;transition:all 0.2s;}
 .btn-cta-secondary:hover{border-color:rgba(255,255,255,0.5);color:#fff;}
-.restart-link{display:block;text-align:center;margin-top:1rem;font-size:0.8rem;color:var(--gray-500);cursor:pointer;background:none;border:none;font-family:'Inter',sans-serif;text-decoration:underline;}
+.restart-link{display:block;text-align:center;margin-top:1rem;font-size:0.8rem;color:var(--gray-500);cursor:pointer;background:none;border:none;font-family:"Inter",sans-serif;text-decoration:underline;}
 .restart-link:hover{color:var(--gray-700);}
-
-/* TRUST STRIP */
 .trust-strip{background:#fff;border-top:1px solid var(--gray-200);padding:1.75rem 1.5rem;}
 .trust-inner{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;text-align:center;}
 .trust-item-icon{font-size:1.25rem;margin-bottom:0.3rem;}
 .trust-item-label{font-size:0.78rem;font-weight:600;color:var(--navy);margin-bottom:2px;}
 .trust-item-sub{font-size:0.72rem;color:var(--gray-500);line-height:1.4;}
-
-/* FOOTER */
-.site-footer{background:var(--navy);padding:2rem 1.5rem 1.5rem;color:rgba(255,255,255,0.42);font-size:0.77rem;line-height:1.6;}
-.footer-inner{max-width:820px;margin:0 auto;}
-.footer-top{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:flex-start;margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,0.07);}
-.footer-brand-logo{font-family:'Merriweather',serif;font-size:0.97rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px;margin-bottom:6px;}
-.footer-brand p{max-width:240px;font-size:0.77rem;}
-.footer-links{display:flex;flex-direction:column;gap:5px;}
-.footer-links a{color:rgba(255,255,255,0.52);text-decoration:none;font-size:0.8rem;transition:color 0.15s;}
-.footer-links a:hover{color:rgba(255,255,255,0.85);}
-.footer-links strong{color:rgba(255,255,255,0.65);font-size:0.76rem;margin-bottom:3px;display:block;}
-.footer-contact{display:flex;flex-direction:column;gap:5px;}
-.footer-contact a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.8rem;display:flex;align-items:center;gap:6px;transition:color 0.15s;}
-.footer-contact a:hover{color:#fff;}
-.footer-contact strong{color:rgba(255,255,255,0.65);font-size:0.76rem;margin-bottom:3px;display:block;}
-.footer-bottom{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:space-between;font-size:0.7rem;margin-bottom:1rem;}
-.footer-bottom a{color:rgba(255,255,255,0.38);text-decoration:none;}
-.footer-disclaimer{font-size:0.66rem;color:rgba(255,255,255,0.26);line-height:1.6;border-top:1px solid rgba(255,255,255,0.06);padding-top:0.9rem;}
-
 @media(max-width:520px){
   .hero{padding:2.5rem 1rem 4rem;}
   .quiz-body,#intro-block,#gate-block,.result-wrap{padding:1.25rem 1.1rem;}
   .quiz-nav{padding:0.8rem 1.1rem 1.2rem;}
   .cta-box{padding:1.1rem;}
-  .footer-top{flex-direction:column;gap:1.1rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <div id="nav-placeholder"></div>
 <script src="/nav.js"></script>
-</header>
 
-<!-- BREADCRUMB -->
 <nav class="breadcrumb">
-  <a href="https://midlandsmedicare.com/">Home</a>
-  <span style="color:rgba(255,255,255,0.28);">›</span>
+  <a href="/">Home</a>
+  <span style="color:rgba(255,255,255,0.28);">&#8250;</span>
   <span>Medicare Quiz</span>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-eyebrow">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Free Medicare Self-Assessment · SC Midlands
+      Free Medicare Self-Assessment &middot; SC Midlands
     </div>
     <h1>Will Medicare leave<br>you <em>exposed?</em></h1>
-    <p class="hero-sub">Most Lexington and Lake Murray seniors don't realize Original Medicare has no out-of-pocket limit. One hospital stay, a stroke, or a cancer diagnosis could cost $20,000 to $60,000 or more.</p>
+    <p class="hero-sub">This quiz now covers Original Medicare, Medicare Supplement (Medigap), and Medicare Advantage. Answer 4 questions and we route you to the path that matches your coverage.</p>
     <div class="hero-pills">
-      <span class="hero-pill">3 minutes</span>
-      <span class="hero-pill">13 questions</span>
+      <span class="hero-pill">Personalized by plan type</span>
+      <span class="hero-pill">~4 minutes</span>
       <span class="hero-pill">Free &amp; confidential</span>
       <span class="hero-pill">No sales pressure</span>
     </div>
@@ -247,39 +193,39 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
       Take the free quiz
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
-    <div class="hero-trust">Serving Lexington · Irmo · Chapin · Lake Murray · Columbia · Blythewood</div>
-    <div class="hero-rating"><span class="stars">★★★★★</span> 5.0 Google Rating · 131 Reviews</div>
+    <div class="hero-trust">Serving Lexington &middot; Irmo &middot; Chapin &middot; Lake Murray &middot; Columbia &middot; Blythewood</div>
+    <div class="hero-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 Google Rating &middot; 131 Reviews</div>
   </div>
 </section>
 
-<!-- SCENARIOS -->
-<section class="scenarios">
-  <div class="scenarios-inner">
-    <div class="section-label">Real out-of-pocket costs with Original Medicare only</div>
-    <div class="scenarios-grid">
-      <div class="scenario-card">
-        <span class="sc-icon">🏥</span>
-        <div class="sc-name">Hospital stay · 5 days</div>
-        <p class="sc-desc">Admitted to Lexington Medical Center for pneumonia. With Original Medicare, you owe the full Part A deductible before coverage kicks in.</p>
-        <div class="sc-cost">$1,632+ out of pocket</div>
+<section class="paths-section">
+  <div class="paths-inner">
+    <div class="section-label">This quiz adapts to your coverage type</div>
+    <div class="paths-grid">
+      <div class="path-card">
+        <span class="path-card-icon">🏥</span>
+        <div class="path-card-name">Original Medicare</div>
+        <div class="path-card-desc">No supplement or Advantage — covers out-of-pocket exposure and gaps</div>
       </div>
-      <div class="scenario-card">
-        <span class="sc-icon">🦽</span>
-        <div class="sc-name">Skilled nursing · 45 days</div>
-        <p class="sc-desc">Hip replacement followed by rehab. Medicare covers days 1–20 at 100%. Days 21–45 cost roughly $200 per day with no supplement plan.</p>
-        <div class="sc-cost">$5,000+ out of pocket</div>
+      <div class="path-card">
+        <span class="path-card-icon">🛡️</span>
+        <div class="path-card-name">Medicare Supplement</div>
+        <div class="path-card-desc">Medigap plan — covers plan letters, rating methods, and premium risk</div>
       </div>
-      <div class="scenario-card">
-        <span class="sc-icon">🩺</span>
-        <div class="sc-name">Cancer treatment · 12 months</div>
-        <p class="sc-desc">Surgery, chemotherapy, follow-up care. With Original Medicare there is no annual out-of-pocket cap. Costs add up fast across multiple services.</p>
-        <div class="sc-cost">$20,000–$60,000+ possible</div>
+      <div class="path-card">
+        <span class="path-card-icon">📋</span>
+        <div class="path-card-name">Medicare Advantage</div>
+        <div class="path-card-desc">Part C plan — covers network, OOP limits, annual changes, and switching rules</div>
+      </div>
+      <div class="path-card">
+        <span class="path-card-icon">❓</span>
+        <div class="path-card-name">Not Sure</div>
+        <div class="path-card-desc">We help you figure out what you have and whether it&apos;s working for you</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUIZ -->
 <section class="quiz-section" id="quiz">
   <div class="quiz-card">
     <div class="quiz-card-hd">
@@ -287,21 +233,21 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
       <div class="quiz-badge" id="card-badge">Midlands, SC</div>
     </div>
     <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div id="path-label" class="path-label"></div>
 
-    <!-- INTRO -->
     <div id="intro-block">
-      <div class="intro-eyebrow">Quick self-assessment</div>
+      <div class="intro-eyebrow">Personalized self-assessment</div>
       <div class="intro-title">Find out where your Medicare coverage actually stands.</div>
-      <div class="intro-body">This quiz is built for seniors in Lexington, Lake Murray, Irmo, Chapin, and the surrounding SC Midlands. Your responses are private. We use your score to show you where real coverage gaps may exist.</div>
+      <div class="intro-body">This quiz now covers Original Medicare, Medigap supplements, and Medicare Advantage. Answer the first 4 questions and we route you to the path that matches your plan — so every question is relevant to you.</div>
       <ul class="intro-checklist">
-        <li><div class="chk">✓</div>Covers the most costly Medicare blind spots</li>
-        <li><div class="chk">✓</div>Based on real Medicare rules, not sales talk</li>
-        <li><div class="chk">✓</div>You get a personalized risk level at the end</li>
-        <li><div class="chk">✓</div>No email required to start — just 3 minutes</li>
+        <li><div class="chk">&#10003;</div>Covers all three major Medicare coverage types</li>
+        <li><div class="chk">&#10003;</div>Adapts to your plan after question 4</li>
+        <li><div class="chk">&#10003;</div>Personalized risk score and explanation</li>
+        <li><div class="chk">&#10003;</div>No email required to start &mdash; about 4 minutes</li>
       </ul>
       <div class="intro-pills">
-        <span class="intro-pill">13 questions</span>
-        <span class="intro-pill">About 3 minutes</span>
+        <span class="intro-pill">~16 questions</span>
+        <span class="intro-pill">About 4 minutes</span>
         <span class="intro-pill">Free, no strings</span>
       </div>
       <button class="btn-start" onclick="startQuiz()">
@@ -310,31 +256,29 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
       </button>
     </div>
 
-    <!-- QUIZ BODY -->
     <div id="quiz-body" style="display:none;">
       <div class="quiz-body">
-        <div class="q-number" id="q-number">Question 1 of 13</div>
+        <div class="q-number" id="q-number">Question 1</div>
         <div class="q-text" id="q-text"></div>
         <div class="choices" id="choices"></div>
       </div>
       <div class="quiz-nav">
-        <button class="btn-back" id="back-btn" onclick="goBack()" disabled>← Back</button>
+        <button class="btn-back" id="back-btn" onclick="goBack()" disabled>&#8592; Back</button>
         <button class="btn-next" id="next-btn" onclick="goNext()" disabled>Next <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
       </div>
     </div>
 
-    <!-- LEAD GATE -->
     <div id="gate-block" style="display:none;">
-      <div class="gate-eyebrow">Almost there — one last step</div>
+      <div class="gate-eyebrow">Almost there &mdash; one last step</div>
       <div class="gate-title">Where should we send your results?</div>
-      <div class="gate-sub">Enter your info below to unlock your Medicare risk score. Jennifer or Ben will follow up to answer questions — no pressure, no obligation, always free.</div>
+      <div class="gate-sub">Enter your info to unlock your personalized Medicare risk score. Jennifer or Ben will follow up to answer questions &mdash; no pressure, no obligation, always free.</div>
       <div class="gate-score-preview">
         <div class="gate-lock">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
         <div class="gate-preview-text">
           <strong>Your score is ready.</strong>
-          Unlock your personalized Medicare risk level and coverage breakdown.
+          Personalized results based on your specific coverage type.
         </div>
       </div>
       <div class="gate-fields">
@@ -354,82 +298,190 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f5f7fa;color:#1a2332;l
           <span class="gate-err" id="err-email">Please enter a valid email address.</span>
         </div>
       </div>
-      <p class="gate-disclaimer">By submitting, you agree to be contacted by Mauldin Insurance Group regarding your Medicare options. We never sell your information. Medicare consulting is always free — you can opt out at any time.</p>
+      <p class="gate-disclaimer">By submitting, you agree to be contacted by Mauldin Insurance Group regarding your Medicare options. We never sell your information. Medicare consulting is always free.</p>
       <button class="btn-gate" id="gate-submit-btn" onclick="submitGate()">
-        <span class="gate-default-label">See my results ✓</span>
-        <span class="gate-spinner" id="gate-spinner">Sending…</span>
+        <span class="gate-default-label">See my results &#10003;</span>
+        <span class="gate-spinner" id="gate-spinner">Sending&hellip;</span>
       </button>
     </div>
 
-    <!-- RESULTS -->
     <div id="result-block" style="display:none;">
       <div class="result-wrap" id="result-inner"></div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
 <div class="trust-strip">
   <div class="trust-inner">
-    <div><div class="trust-item-icon">📍</div><div class="trust-item-label">100% Local</div><div class="trust-item-sub">100 Old Cherokee Rd, Lexington SC — we know the Midlands</div></div>
-    <div><div class="trust-item-icon">🔍</div><div class="trust-item-label">Truly Independent</div><div class="trust-item-sub">Every carrier in your zip — no quota, no pressure</div></div>
-    <div><div class="trust-item-icon">💰</div><div class="trust-item-label">Always Free</div><div class="trust-item-sub">Medicare consulting costs you nothing. Your premium is identical either way.</div></div>
-    <div><div class="trust-item-icon">⭐</div><div class="trust-item-label">5.0 Google Rating</div><div class="trust-item-sub">131 reviews from Lexington, Irmo, Chapin, and Lake Murray neighbors</div></div>
+    <div><div class="trust-item-icon">&#128205;</div><div class="trust-item-label">100% Local</div><div class="trust-item-sub">100 Old Cherokee Rd, Lexington SC</div></div>
+    <div><div class="trust-item-icon">&#128269;</div><div class="trust-item-label">Truly Independent</div><div class="trust-item-sub">Every carrier in your zip &mdash; no quota, no pressure</div></div>
+    <div><div class="trust-item-icon">&#128176;</div><div class="trust-item-label">Always Free</div><div class="trust-item-sub">Medicare consulting costs you nothing</div></div>
+    <div><div class="trust-item-icon">&#11088;</div><div class="trust-item-label">5.0 Google Rating</div><div class="trust-item-sub">131 reviews from Midlands neighbors</div></div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <div id="footer-placeholder"></div>
 <script src="/footer.js"></script>
-</footer>
 
 <script>
-var QUESTIONS=[
-  {text:"If you have Original Medicare (Parts A and B) only, what is the most you could be asked to pay out of pocket in a single year?",choices:["$3,500 — there's a cap like most insurance plans","$7,550 — same as marketplace plans","There is no limit — your costs could be unlimited","$10,000 maximum"],risk:[1,1,3,1]},
-  {text:"If you're admitted to the hospital for 7 days, how much would you owe under Original Medicare — before any supplement kicks in?",choices:["Nothing — Medicare covers hospital stays completely","Around $1,600 for the first 60 days","About $400 total","Medicare doesn't cover hospital stays"],risk:[3,1,2,3]},
-  {text:"You need outpatient surgery at Lexington Medical Center. Medicare Part B covers 80% of the approved cost. Who pays the other 20%?",choices:["Medicare pays the rest automatically","You do — and there is no cap on that 20%","Medicaid always covers the remaining 20%","Your employer plan covers whatever Medicare doesn't"],risk:[3,1,2,2]},
-  {text:"After a hospital stay of at least 3 days, Medicare covers skilled nursing care. How long will Medicare pay 100% of those costs?",choices:["Up to 90 days at full coverage","Up to 60 days, then you share the cost","Only the first 20 days are fully covered","Only if your doctor pre-authorizes up to 6 months"],risk:[2,2,1,2]},
-  {text:"If you need to stay in a skilled nursing facility from day 21 to day 100, what does Medicare charge you per day in 2024?",choices:["Nothing — it stays fully covered through day 100","Around $200 per day out of your pocket","About $10 per day — it's a small copay","Medicare stops all coverage completely after day 20"],risk:[3,1,2,2]},
-  {text:"Does Original Medicare cover long-term care — like living full-time in a nursing home or needing help at home for months or years?",choices:["Yes — Medicare covers it fully","Yes — but only for the first year","No — Medicare does not cover long-term care","Only if you have a Medigap supplement plan"],risk:[3,3,1,2]},
-  {text:"You're diagnosed with cancer and need surgery, chemo, and follow-up care. With Original Medicare only, could your out-of-pocket costs reach $20,000 to $40,000 or more?",choices:["No — Medicare has an annual out-of-pocket maximum","Yes — Original Medicare has no out-of-pocket cap","Only if you're under 70 years old","Chemotherapy is excluded from Medicare coverage"],risk:[3,1,2,3]},
-  {text:"What is a Medicare Supplement plan (also called Medigap) actually designed to do?",choices:["Replace Original Medicare entirely","Pay costs Medicare doesn't cover — like copays and deductibles","Add prescription drug coverage","Provide dental, vision, and hearing benefits"],risk:[3,1,2,2]},
-  {text:"Medicare Advantage plans (Part C) must cover what Original Medicare covers — but may have different networks and referral rules. Do you fully understand how your plan's network works?",choices:["Yes — I know exactly how my network and referrals work","I think so — but I'm not 100% sure about referral rules","I'm not sure which type of plan I have","I have Original Medicare, not an Advantage plan"],risk:[1,2,3,1]},
-  {text:"If you spend time at a lake house near Lake Murray or travel outside the Lexington area, how does your Medicare work away from home?",choices:["I know exactly what's covered when I'm away","Original Medicare works anywhere in the U.S. — not a concern","My Advantage plan covers me everywhere in SC","I'm honestly not sure how travel affects my coverage"],risk:[1,1,2,3]},
-  {text:"Have you reviewed your Medicare plan in the past 12 months to make sure it still fits your health needs and budget?",choices:["Yes — I review it every year during Open Enrollment","No — I've had the same plan for years and haven't looked","I didn't know I was allowed to change my plan","I just enrolled and it's brand new this year"],risk:[1,3,3,1]},
-  {text:"Does your current Medicare coverage include prescription drug benefits (Part D)?",choices:["Yes — and I know which drugs are on my formulary","Yes — but I'm not sure exactly what my plan covers","No — I don't have any Medicare drug coverage","I'm not sure if I have drug coverage or not"],risk:[1,2,3,3]},
-  {text:"If you had a major health event tomorrow — a stroke, a serious fall, or a cancer diagnosis — how confident are you in your Medicare coverage?",choices:["Very confident — I know exactly what I'd owe","Somewhat confident — but I still have some questions","Not very confident — I'm not sure what would happen","I haven't really thought about this before now"],risk:[1,2,3,3]}
+// Site-specific config
+var FORMSPREE_URL = 'https://formspree.io/f/xqewoood';
+var QUIZ_SOURCE = 'Medicare Quiz — midlandsmedicare.com/quiz';
+var JENNIFER_IMG = 'https://irp.cdn-website.com/ed566c5d/dms3rep/multi/socialmediaversionJENNIFER_MAULDIN_998A7540.jpg';
+var JENNIFER_TITLE = 'Medicare Specialist &middot; Lexington, SC &middot; 843-509-2462';
+var SELECTED_COLOR = 'var(--teal)';
+var SELECTED_TEXT = '#fff';
+var COLOR_LOW = '#1a6b3a';
+var COLOR_MOD = '#92520a';
+var COLOR_HIGH = '#8b1f1f';
+
+// ── BRANCHING QUIZ ENGINE ─────────────────────────────────────────────────
+var ALL_QUESTIONS = [
+  // UNIVERSAL Q1-Q3
+  {id:1,path:'all',text:"If you have Original Medicare (Parts A and B) only, what is the most you could be asked to pay out of pocket in a single year?",choices:["$3,500 — there's a cap like most insurance plans","$7,550 — same as marketplace plans","There is no limit — your costs could be unlimited","$10,000 maximum"],risk:[1,1,3,1]},
+  {id:2,path:'all',text:"You need outpatient surgery at your local hospital. Medicare Part B covers 80% of the approved cost. Who pays the other 20%?",choices:["Medicare pays the rest automatically","You do — and with Original Medicare there is no cap on that 20%","Medicaid always covers the remaining 20%","Your employer plan covers whatever Medicare doesn't"],risk:[3,1,2,2]},
+  {id:3,path:'all',text:"Does Original Medicare cover long-term care — like living full-time in a nursing home or needing daily help at home for months or years?",choices:["Yes — Medicare covers it fully","Yes — but only for the first year","No — Medicare does not cover long-term care","Only if you have a Medigap supplement plan"],risk:[3,3,1,2]},
+  // BRANCH DETECTOR Q4
+  {id:4,path:'all',isBranchDetector:true,text:"Which best describes your current Medicare coverage?",choices:["Original Medicare only (Parts A & B) — no supplement or Advantage plan","Original Medicare + a Medicare Supplement (Medigap) plan","Medicare Advantage plan (Part C) — through a private insurer","I'm honestly not sure what type of plan I have"],risk:[2,1,1,3],branches:['original','supplement','advantage','unsure']},
+  // ORIGINAL PATH Q5-Q12
+  {id:5,path:'original',text:"If you're admitted to the hospital for 7 days, how much would you owe under Original Medicare alone?",choices:["Nothing — Medicare covers hospital stays completely","Around $1,600 for the first 60 days","About $400 total","Medicare doesn't cover hospital stays"],risk:[3,1,2,3]},
+  {id:6,path:'original',text:"After a 3-day hospital stay, Medicare covers skilled nursing care. How long will Medicare pay 100% of those costs?",choices:["Up to 90 days at full coverage","Up to 60 days, then you share the cost","Only the first 20 days are fully covered","Only if your doctor pre-authorizes it"],risk:[2,2,1,2]},
+  {id:7,path:'original',text:"If you need skilled nursing care from day 21 to day 100, what does Medicare charge you per day in 2024?",choices:["Nothing — it stays fully covered through day 100","Around $200 per day out of your pocket","About $10 per day — it's a small copay","Medicare stops all coverage after day 20"],risk:[3,1,2,2]},
+  {id:8,path:'original',text:"You're diagnosed with cancer and need surgery, chemo, and follow-up care. With Original Medicare only, could your costs reach $20,000–$40,000 or more?",choices:["No — Medicare has an annual out-of-pocket maximum","Yes — Original Medicare has no out-of-pocket cap","Only if I'm under 70","Chemotherapy is excluded from Medicare"],risk:[3,1,2,3]},
+  {id:9,path:'original',text:"Do you know what a Medicare Supplement (Medigap) plan does, and why someone on Original Medicare might want one?",choices:["Yes — it covers gaps Original Medicare leaves, like deductibles and coinsurance","I've heard of it but I'm not really sure what it covers","No — I didn't know that was an option","I thought that was the same thing as Medicare Advantage"],risk:[1,2,3,3]},
+  {id:10,path:'original',text:"Does your current Medicare coverage include prescription drug benefits (Part D)?",choices:["Yes — and I know which drugs are on my formulary","Yes — but I'm not sure exactly what my plan covers","No — I don't have any drug coverage","I'm not sure if I have drug coverage"],risk:[1,2,3,3]},
+  {id:11,path:'original',text:"Have you reviewed your Medicare coverage in the past 12 months to make sure it still fits your health needs and budget?",choices:["Yes — I review it every year during Open Enrollment","No — I've had the same coverage for years without looking","I didn't know I was allowed to make changes","I just enrolled and it's brand new"],risk:[1,3,3,1]},
+  {id:12,path:'original',text:"If you had a major health event tomorrow — a stroke, a fall, or a cancer diagnosis — how confident are you in your Medicare coverage?",choices:["Very confident — I know exactly what I'd owe","Somewhat confident — but I have some questions","Not very confident — I'm not sure what would happen","I haven't really thought about it"],risk:[1,2,3,3]},
+  // SUPPLEMENT PATH Q5-Q12
+  {id:5,path:'supplement',text:"Do you know which Medigap plan letter you have — for example, Plan G, Plan N, or Plan F?",choices:["Yes — I know exactly which plan letter I have and what it covers","I think I know but I'm not completely sure","No — I'm not sure which plan letter I have","I didn't know there were different plan letters"],risk:[1,2,3,3]},
+  {id:6,path:'supplement',text:"Do you know how your Medicare Supplement premium is rated — and what that means for your costs as you get older?",choices:["Yes — I know if it's community-rated, issue-age, or attained-age rated","I've heard those terms but I'm not sure which applies to me","No — I don't know how my premium is calculated","I didn't know there were different rating methods"],risk:[1,2,3,3]},
+  {id:7,path:'supplement',text:"Have you compared your current Medigap premium to other carriers offering the same plan letter recently?",choices:["Yes — I've shopped it in the last 12 months","No — I've stayed with the same carrier for years without comparing","I didn't know I could switch carriers for identical coverage","My agent reviews it for me annually"],risk:[1,3,3,1]},
+  {id:8,path:'supplement',text:"Does your Medicare Supplement plan include prescription drug coverage (Part D), or do you have that separately?",choices:["I have a separate Part D drug plan and I know what it covers","I have drug coverage but I'm not sure of the details","I don't have any prescription drug coverage","I'm not sure if I have drug coverage"],risk:[1,2,3,3]},
+  {id:9,path:'supplement',text:"Are you aware that switching from Medicare Advantage BACK to a Medigap supplement may require passing medical underwriting in most states?",choices:["Yes — I understand the underwriting rules and enrollment windows","I've heard this but I'm not clear on the specifics","No — I didn't know that","I'm not on Advantage so this doesn't apply to me"],risk:[1,2,3,1]},
+  {id:10,path:'supplement',text:"If you travel or spend time in another state, does your Medicare Supplement cover you there?",choices:["Yes — Medigap works with any Medicare-accepting provider nationwide","I think so but I'm not 100% certain","I'm not sure how travel affects my coverage","No — I think I'm restricted to a local network"],risk:[1,2,3,3]},
+  {id:11,path:'supplement',text:"Do you know what your Medicare Part B deductible is for this year, and whether your plan covers it?",choices:["Yes — I know the amount and whether my plan covers it","I know there's a deductible but not the amount","No — I'm not sure what the Part B deductible is","I thought Medicare covered everything after my premium"],risk:[1,2,3,3]},
+  {id:12,path:'supplement',text:"If you had a major health event tomorrow — cancer, a stroke, or a long hospital stay — how confident are you that your Medigap plan would protect you financially?",choices:["Very confident — I understand exactly what my plan covers","Somewhat confident — but I have some questions","Not sure — I haven't read through my plan details carefully","I'm not confident at all"],risk:[1,2,3,3]},
+  // ADVANTAGE PATH Q5-Q12
+  {id:5,path:'advantage',text:"Do you know your Medicare Advantage plan's annual out-of-pocket maximum for in-network care this year?",choices:["Yes — I know the exact dollar amount","I have a general idea but not the specific number","No — I'm not sure what my out-of-pocket max is","I didn't know Medicare Advantage plans had an out-of-pocket max"],risk:[1,2,3,2]},
+  {id:6,path:'advantage',text:"Have you verified that your primary care doctor AND your main specialists are still in-network on your current plan this year?",choices:["Yes — I confirmed my doctors are in-network for this year","I checked when I enrolled but not since then","No — I haven't verified my network recently","I didn't know networks could change year to year"],risk:[1,2,3,3]},
+  {id:7,path:'advantage',text:"Are you aware that your Medicare Advantage plan's benefits, premiums, copays, and provider network can all change on January 1 every year?",choices:["Yes — I review my Annual Notice of Change every fall","I knew things could change but I don't always review it","No — I assumed my plan stayed the same each year","I've never received or read an Annual Notice of Change"],risk:[1,2,3,3]},
+  {id:8,path:'advantage',text:"If you needed emergency care while traveling in another state, do you know how your Medicare Advantage plan covers you?",choices:["Yes — I know exactly what's covered for emergency and urgent care away from home","I think emergencies are covered but I'm not sure about urgent care","I'm not sure how travel affects my coverage","I don't think I'm covered outside my service area"],risk:[1,2,3,3]},
+  {id:9,path:'advantage',text:"Do you know whether your Medicare Advantage plan requires referrals to see specialists, or whether you can self-refer?",choices:["Yes — I know exactly how my referral process works","I think I can self-refer but I'm not certain","I'm not sure — I've never really looked into it","I've had trouble getting referrals but didn't know why"],risk:[1,2,3,3]},
+  {id:10,path:'advantage',text:"Are you aware that switching from Medicare Advantage back to Original Medicare with a Medigap supplement may require medical underwriting — and you could be denied?",choices:["Yes — I understand the switching rules and windows","I've heard this but I'm not clear on the details","No — I thought I could switch anytime I wanted","I didn't know there were restrictions on switching"],risk:[1,2,3,3]},
+  {id:11,path:'advantage',text:"Does your Medicare Advantage plan include prescription drug coverage (Part D), and do you know which of your medications are covered this year?",choices:["Yes — I have drug coverage and I've verified my medications are covered","Yes — I have drug coverage but I haven't checked the formulary recently","I'm not sure if my plan includes drug coverage","No — I don't have drug coverage included"],risk:[1,2,2,3]},
+  {id:12,path:'advantage',text:"If you had a major health event tomorrow — cancer, a stroke, or a serious injury — how confident are you that your Medicare Advantage plan would protect you financially?",choices:["Very confident — I know my out-of-pocket max and what's covered","Somewhat confident — but I haven't read through the details","Not very confident — I don't know exactly what I'd owe","I haven't thought about what a serious illness would actually cost me"],risk:[1,2,3,3]},
+  // UNSURE PATH Q5-Q8
+  {id:5,path:'unsure',text:"When you pay your health insurance costs, which best describes what you pay monthly?",choices:["I pay a Medicare Part B premium (~$175/month) and possibly a drug plan premium","I pay a monthly premium to a private insurance company for my Medicare plan","I pay very little or nothing beyond Medicare Part B","I'm genuinely not sure what I pay or to whom"],risk:[2,2,2,3]},
+  {id:6,path:'unsure',text:"If you needed to see a specialist — like a cardiologist or oncologist — do you need a referral, or can you make the appointment directly?",choices:["I can see any specialist I want without a referral","I need to get a referral from my primary doctor first","I'm honestly not sure how it works","I've never needed a specialist so I don't know"],risk:[1,2,3,3]},
+  {id:7,path:'unsure',text:"Do you have prescription drug coverage as part of your Medicare, and do you know what it covers?",choices:["Yes — I have drug coverage and I understand what's covered","I think I have drug coverage but I'm not sure of the details","I don't think I have any prescription drug coverage","I have no idea if I have drug coverage"],risk:[1,2,3,3]},
+  {id:8,path:'unsure',text:"Have you ever sat down with a Medicare advisor to review your current coverage and make sure it's the right fit?",choices:["Yes — I've had a thorough review with a licensed agent","I talked to someone briefly when I first enrolled, but not since","No — I enrolled on my own and haven't had a review","I didn't know that was something I could do for free"],risk:[1,2,3,3]},
+  // UNIVERSAL CLOSING
+  {id:98,path:'all',text:"Do you know what changes — if any — your Medicare coverage made on January 1 of this year?",choices:["Yes — I reviewed my Annual Notice of Change and know what changed","I received a notice but didn't read it carefully","No — I wasn't aware my coverage could change","I don't recall receiving any notice about changes"],risk:[1,2,3,3]},
+  {id:99,path:'all',text:"If you had a major health event tomorrow — a stroke, a cancer diagnosis, or a serious accident — how prepared do you feel financially?",choices:["Very prepared — I know exactly what I'd owe and I'm comfortable with it","Somewhat prepared — but I have unanswered questions","Not very prepared — I'm not sure what would happen","I haven't thought through what a serious illness would actually cost me"],risk:[1,2,3,3]}
 ];
-var LETTERS=['A','B','C','D'];
-var current=0,answers=new Array(QUESTIONS.length).fill(null),scores=new Array(QUESTIONS.length).fill(0);
 
-function startQuiz(){document.getElementById('intro-block').style.display='none';document.getElementById('quiz-body').style.display='block';document.getElementById('card-badge').textContent='1 of '+QUESTIONS.length;renderQuestion();}
+var LETTERS = ['A','B','C','D'];
+var currentBranch = null;  // 'original','supplement','advantage','unsure'
+var sequence = [];         // ordered list of question objects to show
+var current = 0;           // index into sequence
+var answers = {};          // id+path -> answer index
+var scores = [];           // risk scores in order
 
-function renderQuestion(){
-  var q=QUESTIONS[current],total=QUESTIONS.length;
-  document.getElementById('q-number').textContent='Question '+(current+1)+' of '+total;
-  document.getElementById('card-badge').textContent=(current+1)+' of '+total;
-  document.getElementById('q-text').textContent=q.text;
-  document.getElementById('progress-fill').style.width=((current/total)*100)+'%';
-  document.getElementById('back-btn').disabled=(current===0);
-  document.getElementById('next-btn').disabled=(answers[current]===null);
-  document.getElementById('next-btn').innerHTML=current===total-1?'See my results ✓':'Next <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
-  var cd=document.getElementById('choices');cd.innerHTML='';
-  q.choices.forEach(function(c,i){var b=document.createElement('button');b.className='choice-btn'+(answers[current]===i?' selected':'');b.innerHTML='<span class="choice-letter">'+LETTERS[i]+'</span><span>'+c+'</span>';b.onclick=function(){selectAnswer(i);};cd.appendChild(b);});
+function buildSequence() {
+  // Universal Q1-Q3
+  var seq = ALL_QUESTIONS.filter(function(q){return q.path==='all' && q.id < 4;});
+  // Branch detector Q4
+  seq = seq.concat(ALL_QUESTIONS.filter(function(q){return q.isBranchDetector;}));
+  // Path-specific Q5-Q12 (determined after Q4 is answered — placeholder until then)
+  // Closing Q98, Q99
+  var closing = ALL_QUESTIONS.filter(function(q){return q.path==='all' && (q.id===98||q.id===99);});
+  seq = seq.concat(closing);
+  return seq;
 }
 
-function selectAnswer(idx){
-  answers[current]=idx;scores[current]=QUESTIONS[current].risk[idx];
-  document.getElementById('next-btn').disabled=false;
+function buildFullSequence(branch) {
+  var universal = ALL_QUESTIONS.filter(function(q){return q.path==='all' && q.id < 4;});
+  var detector = ALL_QUESTIONS.filter(function(q){return q.isBranchDetector;});
+  var pathQs = ALL_QUESTIONS.filter(function(q){return q.path===branch;});
+  var closing = ALL_QUESTIONS.filter(function(q){return q.path==='all' && (q.id===98||q.id===99);});
+  return universal.concat(detector).concat(pathQs).concat(closing);
+}
+
+function startQuiz(){
+  sequence = buildSequence();
+  document.getElementById('intro-block').style.display='none';
+  document.getElementById('quiz-body').style.display='block';
+  document.getElementById('card-badge').textContent='1 of ?';
+  renderQuestion();
+}
+
+function renderQuestion(){
+  var q = sequence[current];
+  var total = sequence.length;
+  document.getElementById('q-number').textContent = 'Question '+(current+1)+' of '+total;
+  document.getElementById('card-badge').textContent = (current+1)+' of '+total;
+  document.getElementById('q-text').textContent = q.text;
+  document.getElementById('progress-fill').style.width = ((current/total)*100)+'%';
+  document.getElementById('back-btn').disabled = (current===0);
+
+  // Show branch label if on a path
+  var pathLabel = document.getElementById('path-label');
+  if(pathLabel) {
+    var labels = {original:'Original Medicare',supplement:'Medicare Supplement',advantage:'Medicare Advantage',unsure:'General Assessment'};
+    pathLabel.textContent = currentBranch ? labels[currentBranch] : '';
+    pathLabel.style.display = currentBranch ? 'block' : 'none';
+  }
+
+  var answered = getAnswerKey(q);
+  document.getElementById('next-btn').disabled = (answered === undefined);
+  document.getElementById('next-btn').innerHTML = current===total-1
+    ? 'See my results ✓'
+    : 'Next <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+
+  var cd = document.getElementById('choices'); cd.innerHTML = '';
+  q.choices.forEach(function(c,i){
+    var b = document.createElement('button');
+    b.className = 'choice-btn'+(answered===i?' selected':'');
+    b.innerHTML = '<span class="choice-letter">'+LETTERS[i]+'</span><span>'+c+'</span>';
+    b.onclick = function(){selectAnswer(q,i);};
+    cd.appendChild(b);
+  });
+}
+
+function getAnswerKey(q){
+  return answers[(q.isBranchDetector ? 'detector' : q.path+'-'+q.id)];
+}
+
+function selectAnswer(q,idx){
+  var key = q.isBranchDetector ? 'detector' : q.path+'-'+q.id;
+  answers[key] = idx;
+
+  // If this is the branch detector, rebuild the sequence
+  if(q.isBranchDetector){
+    currentBranch = q.branches[idx];
+    sequence = buildFullSequence(currentBranch);
+    // Preserve answers already given
+  }
+
+  document.getElementById('next-btn').disabled = false;
   document.querySelectorAll('.choice-btn').forEach(function(b,i){
     b.classList.toggle('selected',i===idx);
-    var l=b.querySelector('.choice-letter');
-    if(i===idx){l.style.background='var(--teal)';l.style.color='#fff';l.style.borderColor='var(--teal)';}
+    var l = b.querySelector('.choice-letter');
+    if(i===idx){l.style.background=SELECTED_COLOR;l.style.color=SELECTED_TEXT;l.style.borderColor=SELECTED_COLOR;}
     else{l.style.background='';l.style.color='';l.style.borderColor='';}
   });
 }
 
-function goNext(){if(answers[current]===null)return;if(current<QUESTIONS.length-1){current++;renderQuestion();}else{showGate();}}
-function goBack(){if(current>0){current--;renderQuestion();}}
+function goNext(){
+  var q = sequence[current];
+  if(getAnswerKey(q)===undefined) return;
+  if(current < sequence.length-1){ current++; renderQuestion(); }
+  else { showGate(); }
+}
+
+function goBack(){
+  if(current > 0){ current--; renderQuestion(); }
+}
 
 function showGate(){
   document.getElementById('quiz-body').style.display='none';
@@ -451,84 +503,179 @@ function submitGate(){
   if(!phone||phone.replace(/\D/g,'').length<10){document.getElementById('gate-phone').classList.add('error');document.getElementById('err-phone').classList.add('show');valid=false;}
   if(!email||!email.includes('@')||!email.includes('.')){document.getElementById('gate-email').classList.add('error');document.getElementById('err-email').classList.add('show');valid=false;}
   if(!valid)return;
-  var total=scores.reduce(function(a,b){return a+b;},0);
-  var pct=Math.round((total/(QUESTIONS.length*3))*100);
-  var tier=pct<=40?'Low Risk':pct<=65?'Moderate Risk':'High Risk';
+
+  // Calculate score from all answered questions
+  var totalScore=0, maxScore=0;
+  sequence.forEach(function(q){
+    var ans = getAnswerKey(q);
+    if(ans!==undefined && q.risk){
+      totalScore += q.risk[ans];
+      maxScore += 3;
+    }
+  });
+  var pct = maxScore > 0 ? Math.round((totalScore/maxScore)*100) : 50;
+  var tier = pct<=40?'Low Risk':pct<=65?'Moderate Risk':'High Risk';
+  var pathLabels = {original:'Original Medicare',supplement:'Medicare Supplement (Medigap)',advantage:'Medicare Advantage',unsure:'Coverage Unclear'};
+  var planType = currentBranch ? pathLabels[currentBranch] : 'Unknown';
+
   var btn=document.getElementById('gate-submit-btn');btn.disabled=true;
   document.querySelector('.gate-default-label').style.display='none';
   document.getElementById('gate-spinner').style.display='inline';
-  fetch('https://formspree.io/f/xqewoood',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,phone:phone,email:email,risk_tier:tier,risk_score:pct+' / 100',source:'Medicare Quiz — midlandsmedicare.com/quiz'})})
-  .then(function(){showResults(name);}).catch(function(){showResults(name);});
+
+  fetch(FORMSPREE_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({
+    name:name,phone:phone,email:email,
+    risk_tier:tier,risk_score:pct+' / 100',
+    plan_type:planType,
+    source:QUIZ_SOURCE
+  })})
+  .then(function(){showResults(name,pct,tier,planType);})
+  .catch(function(){showResults(name,pct,tier,planType);});
 }
 
-function showResults(userName){
+function showResults(userName,pct,tier,planType){
   var firstName=userName?userName.split(' ')[0]:'';
-  var total=scores.reduce(function(a,b){return a+b;},0);
-  var pct=Math.round((total/(QUESTIONS.length*3))*100);
-  var tier,badgeClass,headline,body,ctaHead,ctaSub,ringColor;
+  var badgeClass,headline,body,ctaHead,ctaSub,ringColor;
+  var branch = currentBranch || 'original';
+
   if(pct<=40){
-    tier='Low Risk';badgeClass='badge-low';ringColor='#1a6b3a';
+    badgeClass='badge-low';ringColor=COLOR_LOW;
     headline=(firstName?firstName+', good news':'Good news')+' — you\'re better prepared than most.';
-    body='<p>Based on your answers, you have a solid understanding of how Medicare works and what your coverage actually does. That puts you ahead of most people in the Lexington and Lake Murray area who\'ve never stopped to think about it.</p><p>Still, "low risk" doesn\'t mean "no risk." Medicare rules change every year during Open Enrollment (October 15 – December 7). Drug formularies shift. Premiums change. And if your health has changed — even a new medication or a new diagnosis — your plan may no longer be the best fit.</p><p>A quick annual review with Jennifer costs nothing and takes about 30 minutes. You\'ll walk away knowing your plan still works for you in '+new Date().getFullYear()+'.</p>';
-    ctaHead='Schedule a free annual plan review.';
-    ctaSub='No pressure, no commitment. Just a quick conversation to confirm your coverage still fits.';
-  }else if(pct<=65){
-    tier='Moderate Risk';badgeClass='badge-mod';ringColor='#92520a';
+    if(branch==='supplement'){
+      body='<p>Based on your answers, you have a solid grasp of your Medicare Supplement coverage. That puts you in a good position — most people never dig into the details of their Medigap plan.</p><p>That said, even well-covered people can benefit from a quick annual check. Supplement premiums vary significantly between carriers for identical coverage, and rate increases can be avoided by shopping. It costs nothing to compare.</p><p>A 30-minute review with Jennifer can confirm you\'re on the right plan at the best available rate.</p>';
+      ctaHead='Schedule a free Medigap rate review.';
+      ctaSub='Same coverage, potentially lower premium. It takes 30 minutes and costs nothing.';
+    } else if(branch==='advantage'){
+      body='<p>Based on your answers, you have a strong understanding of your Medicare Advantage coverage — including your network, out-of-pocket limits, and how your plan works. That\'s genuinely unusual.</p><p>Still, plans change every January 1. A quick annual review before Open Enrollment (Oct 15–Dec 7) makes sure your plan still makes sense for the coming year — especially if your health situation or doctors have changed.</p><p>Jennifer reviews Advantage plans for clients at no cost every year.</p>';
+      ctaHead='Schedule your free annual plan review.';
+      ctaSub='Make sure your Advantage plan still fits your doctors, your drugs, and your budget for ' + new Date().getFullYear() + '.';
+    } else {
+      body='<p>Based on your answers, you have a solid understanding of how Medicare works and what your coverage actually does. That puts you ahead of most people who\'ve never stopped to think it through.</p><p>Still, Medicare rules change every year during Open Enrollment (October 15 – December 7). Drug formularies shift. Premiums change. And if your health has changed, your plan may no longer be the right fit.</p><p>A quick annual review with Jennifer costs nothing and takes about 30 minutes.</p>';
+      ctaHead='Schedule a free annual plan review.';
+      ctaSub='No pressure, no commitment. Just a quick conversation to confirm your coverage still fits.';
+    }
+  } else if(pct<=65){
+    badgeClass='badge-mod';ringColor=COLOR_MOD;
     headline=(firstName?firstName+', you have':'You have')+' some gaps worth looking at.';
-    body='<p>Your answers show a basic understanding of Medicare — but there are a few areas where a gap could catch you off guard. Maybe you\'re unsure what happens after day 20 in a skilled nursing facility, or you haven\'t reviewed your drug coverage lately, or you\'re not clear on what you\'d owe if something serious happened.</p><p>These gaps are common for Midlands seniors. The problem is that when a health event hits — a fall, a hospital stay, a cancer diagnosis — that uncertainty turns into real financial stress fast.</p><p>This is fixable. A free review with Jennifer can close those gaps quickly. You don\'t have to switch anything, but you\'ll know exactly where you stand.</p>';
-    ctaHead='Get a free coverage review.';
-    ctaSub='Find out what you\'re actually protected against — and what you\'re not. No obligation, no pressure.';
-  }else{
-    tier='High Risk';badgeClass='badge-high';ringColor='#8b1f1f';
-    headline='Your Medicare coverage may be leaving you seriously exposed.';
-    body='<p>Based on your answers, there are significant gaps in either your Medicare knowledge or your current coverage. Original Medicare has no out-of-pocket maximum. A single hospital stay, a cancer diagnosis, or a few months in a skilled nursing facility could cost you $20,000, $50,000, or more. Medicare does not cover long-term care at all.</p><p>Many Midlands seniors are in exactly this situation — often because they enrolled in whatever was simplest and never looked back. The rules are confusing, and the gaps aren\'t explained when you first sign up.</p><p>You have real options. Medicare Supplement and Advantage plans can be reviewed and often adjusted without changing your Lexington Medical Center doctors. The first step is understanding where you actually stand.</p>';
-    ctaHead='This conversation could save you thousands.';
-    ctaSub='Jennifer Mauldin is a local, independent Medicare advisor in Lexington. She compares every carrier in your zip code at no cost to you.';
+    if(branch==='supplement'){
+      body='<p>Your answers show a basic understanding of your Medigap coverage — but there are a few areas worth a closer look. You may not know your plan\'s rating method, which affects how your premium grows over time. You may also be paying more than necessary if you haven\'t compared rates recently.</p><p>Medigap plans with the same letter (like Plan G) offer identical benefits regardless of carrier — so price and carrier stability are the only real differences. Many people save hundreds per year just by switching carriers.</p><p>A free review with Jennifer takes 30 minutes and could save you real money.</p>';
+      ctaHead='Find out if you\'re overpaying for your Medigap plan.';
+      ctaSub='Same coverage, better rate. Jennifer compares every carrier available in your zip code at no cost.';
+    } else if(branch==='advantage'){
+      body='<p>Your answers show you understand the basics of Medicare Advantage — but there are a few gaps that could catch you off guard. Maybe you haven\'t verified your network this year, or you\'re not sure how your plan handles travel. Or you didn\'t realize plans can change their benefits every January 1.</p><p>These gaps are common. The problem is that when something happens — an unexpected diagnosis, a doctor who left the network, a formulary change — that uncertainty becomes real financial stress fast.</p><p>A free review with Jennifer before Open Enrollment can close those gaps and make sure your plan still works for you.</p>';
+      ctaHead='Get a free Medicare Advantage coverage review.';
+      ctaSub='Verify your network, your drugs, and your out-of-pocket limits for ' + new Date().getFullYear() + '. No obligation.';
+    } else {
+      body='<p>Your answers show a basic understanding of Medicare — but there are a few areas where a gap could catch you off guard. Maybe you\'re unsure what happens after day 20 in a skilled nursing facility, or you haven\'t reviewed your drug coverage lately.</p><p>These gaps are common. The problem is that when a health event hits — a fall, a hospital stay, a cancer diagnosis — that uncertainty turns into real financial stress fast.</p><p>A free review with Jennifer can close those gaps quickly. You don\'t have to switch anything, but you\'ll know exactly where you stand.</p>';
+      ctaHead='Get a free coverage review.';
+      ctaSub='Find out what you\'re actually protected against — and what you\'re not. No obligation, no pressure.';
+    }
+  } else {
+    badgeClass='badge-high';ringColor=COLOR_HIGH;
+    if(branch==='supplement'){
+      headline=(firstName?firstName+', your Medigap situation':' Your Medigap situation')+' deserves a closer look.';
+      body='<p>Based on your answers, there are some significant gaps in your understanding of your Medicare Supplement coverage. You may not know your plan letter, your rating method, or whether your premium is competitive. These things matter — a lot.</p><p>The good news is that Medigap plans are standardized, which means Plan G from one carrier covers exactly the same things as Plan G from another. If your premium has been rising, you may be able to switch to a lower-cost carrier with identical coverage — but there are rules and windows that apply.</p><p>Jennifer can review your current plan, explain your options clearly, and find out if you\'re overpaying — at no cost to you.</p>';
+      ctaHead='Find out if your Medigap plan is working for you.';
+      ctaSub='Jennifer Mauldin is a licensed, independent Medicare advisor. She compares every carrier available in your zip code — at no cost.';
+    } else if(branch==='advantage'){
+      headline='Your Medicare Advantage coverage may have more gaps than you realize.';
+      body='<p>Based on your answers, there are significant gaps in your understanding of your Medicare Advantage plan — and that creates real financial risk. You may not know your out-of-pocket maximum, whether your doctors are still in-network, or that your plan\'s benefits could have changed on January 1.</p><p>Medicare Advantage plans are not all created equal. Some have tight networks, high out-of-pocket maximums, and limited coverage away from home. And switching back to a Medicare Supplement after your first year may require medical underwriting.</p><p>Jennifer can walk you through exactly what your plan covers, what it doesn\'t, and whether it\'s still the right fit for your situation.</p>';
+      ctaHead='Get a complete Medicare Advantage plan review.';
+      ctaSub='Know your network, your limits, and your options. Jennifer Mauldin — licensed, independent, and always free.';
+    } else if(branch==='unsure'){
+      headline='You need a Medicare review — and the sooner the better.';
+      body='<p>Based on your answers, you\'re not fully clear on what type of Medicare coverage you have or how it works. That\'s a real risk — not because anything is wrong right now, but because you won\'t know what\'s missing until you need it.</p><p>Not knowing your coverage type, your out-of-pocket exposure, or whether you have drug coverage could cost you thousands of dollars in the event of a serious health issue.</p><p>The good news: a free 30-minute review with Jennifer can answer every question you have, identify any gaps, and make sure you\'re enrolled in the right plan — with no pressure to change anything.</p>';
+      ctaHead='Get a free Medicare coverage review — start from scratch if needed.';
+      ctaSub='Jennifer Mauldin will walk you through exactly what you have, what you\'re missing, and what your options are. Always free, always local.';
+    } else {
+      headline='Your Medicare coverage may be leaving you seriously exposed.';
+      body='<p>Based on your answers, there are significant gaps in either your Medicare knowledge or your current coverage. Original Medicare has no out-of-pocket maximum. A single hospital stay, a cancer diagnosis, or a few months in a skilled nursing facility could cost $20,000, $50,000, or more.</p><p>Many seniors are in exactly this situation — often because they enrolled in whatever was simplest and never looked back. The rules are confusing and the gaps aren\'t explained when you first sign up.</p><p>You have real options. Medicare Supplement and Advantage plans can be reviewed and often adjusted without disrupting your current doctors. The first step is understanding where you actually stand.</p>';
+      ctaHead='This conversation could save you thousands.';
+      ctaSub='Jennifer Mauldin is a licensed, independent Medicare advisor. She compares every carrier available in your zip code — at no cost to you.';
+    }
   }
-  var C=2*Math.PI*28,offset=C-(pct/100)*C;
+
+  var pathLabelText = {original:'Original Medicare',supplement:'Medicare Supplement',advantage:'Medicare Advantage',unsure:'Coverage Review'}[branch] || 'Medicare';
+  var scenariosHTML = buildScenarios(branch);
+  var C=2*Math.PI*28, offset=C-(pct/100)*C;
+
   var html=[
+    '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:0.75rem;">',
     '<span class="result-badge '+badgeClass+'">'+tier+'</span>',
-    '<div class="result-headline">'+headline+'</div>',
-    '<div class="score-row"><div class="score-ring-wrap"><svg class="score-ring-svg" viewBox="0 0 64 64"><circle class="ring-bg" cx="32" cy="32" r="28"/><circle class="ring-fill" cx="32" cy="32" r="28" stroke="'+ringColor+'" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+C.toFixed(1)+'" id="ring-arc"/></svg></div><div class="score-meta"><div class="score-label">Your risk score</div><div class="score-num">'+pct+'<span style="font-size:0.72rem;font-weight:400;color:var(--gray-500);font-family:Inter,sans-serif;"> / 100</span></div><div class="score-sub">Higher = more potential exposure</div></div></div>',
-    '<div class="result-body">'+body+'</div>',
-    '<div class="result-scenarios-hd">Real-life costs — Original Medicare only</div>',
-    '<div class="result-scenarios">',
-    '<div class="rs-card"><div class="rs-icon">🏥</div><div><div class="rs-name">Hospital stay · 5 days at Lexington Medical Center</div><div class="rs-desc">Admitted for pneumonia. You pay the full Part A deductible before Medicare covers additional services.</div><div class="rs-cost">$1,632+ out of pocket</div></div></div>',
-    '<div class="rs-card"><div class="rs-icon">🦽</div><div><div class="rs-name">Skilled nursing · 45 days after hip replacement</div><div class="rs-desc">Medicare covers days 1–20 fully. Days 21–45 cost ~$200/day with no supplement plan.</div><div class="rs-cost">$5,000+ out of pocket</div></div></div>',
-    '<div class="rs-card"><div class="rs-icon">🩺</div><div><div class="rs-name">Cancer treatment · 12 months</div><div class="rs-desc">Surgery, chemo, follow-up care. Original Medicare has no annual out-of-pocket cap.</div><div class="rs-cost">$20,000–$60,000+ possible</div></div></div>',
+    '<span style="font-size:0.72rem;font-weight:600;padding:0.25rem 0.75rem;border-radius:999px;background:var(--gray-100);border:1px solid var(--gray-200);color:var(--gray-500);">'+pathLabelText+'</span>',
     '</div>',
+    '<div class="result-headline">'+headline+'</div>',
+    '<div class="score-row"><div class="score-ring-wrap"><svg class="score-ring-svg" viewBox="0 0 64 64"><circle class="ring-bg" cx="32" cy="32" r="28"/><circle class="ring-fill" cx="32" cy="32" r="28" stroke="'+ringColor+'" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+C.toFixed(1)+'" id="ring-arc"/></svg></div><div class="score-meta"><div class="score-label">Your risk score</div><div class="score-num">'+pct+'<span style="font-size:0.72rem;font-weight:400;color:var(--gray-500);"> / 100</span></div><div class="score-sub">Based on your '+pathLabelText+' coverage</div></div></div>',
+    '<div class="result-body">'+body+'</div>',
+    scenariosHTML,
     '<div class="cta-box">',
     '<div class="cta-headline">'+ctaHead+'</div>',
     '<div class="cta-sub">'+ctaSub+'</div>',
-    '<div class="cta-agent"><div class="cta-agent-avatar"><img src="https://irp.cdn-website.com/ed566c5d/dms3rep/multi/socialmediaversionJENNIFER_MAULDIN_998A7540.jpg" alt="Jennifer Mauldin" onerror="this.parentElement.innerHTML=\'👤\'"></div><div class="cta-agent-info"><div class="cta-agent-name">Jennifer Mauldin</div><div class="cta-agent-title">Medicare Specialist · Lexington, SC · 843-509-2462</div></div></div>',
+    '<div class="cta-agent"><div class="cta-agent-avatar"><img src="'+JENNIFER_IMG+'" alt="Jennifer Mauldin" onerror="this.parentElement.innerHTML=\'👤\'"></div><div class="cta-agent-info"><div class="cta-agent-name">Jennifer Mauldin</div><div class="cta-agent-title">'+JENNIFER_TITLE+'</div></div></div>',
     '<div class="cta-btns"><a href="tel:+18435092462" class="btn-cta-primary"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.69A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.04 6.04l1.51-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>Call 843-509-2462</a><a href="https://www.mauldininsurancegroup.com/contact" class="btn-cta-secondary">Schedule free review →</a></div>',
     '</div>',
     '<button class="restart-link" onclick="restartQuiz()">Retake the quiz</button>'
   ].join('');
+
   document.getElementById('quiz-body').style.display='none';
   document.getElementById('gate-block').style.display='none';
   document.getElementById('result-block').style.display='block';
   document.getElementById('result-inner').innerHTML=html;
   document.getElementById('card-title').textContent='Your Results';
-  document.getElementById('card-badge').textContent=tier;
+  document.getElementById('card-badge').textContent=tier+' · '+pathLabelText;
   document.getElementById('progress-fill').style.width='100%';
   setTimeout(function(){var arc=document.getElementById('ring-arc');if(arc)arc.style.strokeDashoffset=offset.toFixed(1);},120);
   document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function buildScenarios(branch){
+  var scenarios;
+  if(branch==='supplement'){
+    scenarios=[
+      {icon:'💸',name:'Premium creep over 5 years',desc:'An attained-age rated Plan G at $140/month at 65 can reach $220+/month by 70. Shopping carriers could save $80+/month — $960/year — for identical coverage.',cost:'Potential savings: $960+/year'},
+      {icon:'🏥',name:'Hospital stay · 5 days',desc:'With a Plan G supplement, your only out-of-pocket is the annual Part B deductible (~$240). Without knowing your plan details, you may not know you\'re this well protected.',cost:'Your exposure with Plan G: ~$240/year'},
+      {icon:'💊',name:'Wrong drug plan',desc:'Formularies change every year. A drug that cost $30/month last year may cost $120 this year if your plan changed its tier structure.',cost:'Potential extra cost: $1,080+/year'}
+    ];
+  } else if(branch==='advantage'){
+    scenarios=[
+      {icon:'🏥',name:'Out-of-network hospital stay',desc:'If your hospital or specialist dropped out of your Advantage network and you didn\'t know, your costs could be dramatically higher — or claims could be denied entirely.',cost:'Potential cost: $5,000–$10,000+ out of pocket'},
+      {icon:'🩺',name:'Cancer treatment',desc:'Medicare Advantage out-of-pocket maximums range from $3,500 to $8,850 for in-network care in 2024. Do you know yours? Out-of-network maximums can be double that.',cost:'Maximum exposure: $3,500–$17,700+'},
+      {icon:'✈️',name:'Medical emergency while traveling',desc:'Most Advantage plans cover emergency care nationwide, but urgent care away from home may only be covered in specific circumstances depending on your plan.',cost:'Potential uncovered costs: $500–$5,000+'}
+    ];
+  } else if(branch==='unsure'){
+    scenarios=[
+      {icon:'❓',name:'Not knowing your coverage type',desc:'Original Medicare has no out-of-pocket cap. Medicare Advantage has network restrictions. Not knowing which you have means you can\'t plan for a major health event.',cost:'Potential uncovered exposure: Unlimited with Original Medicare'},
+      {icon:'💊',name:'Missing drug coverage',desc:'Without Part D, you pay full retail price for prescriptions. A single specialty drug can cost $500–$2,000/month without coverage.',cost:'Potential monthly drug cost without Part D: $500–$2,000+'},
+      {icon:'🏥',name:'Unexpected hospital stay',desc:'Depending on your coverage type, a 5-day hospital stay could cost $240 (with a good supplement) or $1,600+ (Original Medicare alone). Not knowing the difference matters.',cost:'Exposure range: $240 to unlimited'}
+    ];
+  } else {
+    scenarios=[
+      {icon:'🏥',name:'Hospital stay · 5 days',desc:'Admitted to your local hospital with Original Medicare only. You pay the full Part A deductible before Medicare covers additional services.',cost:'$1,632+ out of pocket'},
+      {icon:'🦽',name:'Skilled nursing · 45 days after hip replacement',desc:'Medicare covers days 1–20 fully. Days 21–45 cost ~$200/day with no supplement plan in place.',cost:'$5,000+ out of pocket'},
+      {icon:'🩺',name:'Cancer treatment · 12 months',desc:'Surgery, chemo, follow-up care. Original Medicare has no annual out-of-pocket cap.',cost:'$20,000–$60,000+ possible'}
+    ];
+  }
+
+  return '<div class="result-scenarios-hd">What this means in real dollars</div><div class="result-scenarios">'
+    + scenarios.map(function(s){
+        return '<div class="rs-card"><div class="rs-icon">'+s.icon+'</div><div><div class="rs-name">'+s.name+'</div><div class="rs-desc">'+s.desc+'</div><div class="rs-cost">'+s.cost+'</div></div></div>';
+      }).join('')
+    + '</div>';
+}
+
 function restartQuiz(){
-  current=0;answers=new Array(QUESTIONS.length).fill(null);scores=new Array(QUESTIONS.length).fill(0);
+  currentBranch=null; sequence=[]; current=0; answers={}; scores=[];
   document.getElementById('result-block').style.display='none';
   document.getElementById('gate-block').style.display='none';
   document.getElementById('quiz-body').style.display='block';
   document.getElementById('card-title').textContent='Medicare Self-Assessment';
-  document.getElementById('card-badge').textContent='1 of '+QUESTIONS.length;
+  document.getElementById('card-badge').textContent='1 of ?';
   document.getElementById('gate-name').value='';document.getElementById('gate-phone').value='';document.getElementById('gate-email').value='';
   var btn=document.getElementById('gate-submit-btn');btn.disabled=false;
   document.querySelector('.gate-default-label').style.display='inline';
   document.getElementById('gate-spinner').style.display='none';
-  renderQuestion();
+  sequence=buildSequence(); renderQuestion();
 }
+
 </script>
 </body>
 </html>
