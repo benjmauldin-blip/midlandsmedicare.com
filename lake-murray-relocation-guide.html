@@ -54,85 +54,6 @@
       background: var(--white);
       line-height: 1.65;
     }
-
-    /* ── NAV — exact match to midlandsmedicare.com ── */
-    .site-nav {
-      background: var(--navy);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    }
-    .nav-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 62px;
-    }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .nav-logo-box {
-      width: 38px; height: 38px;
-      background: var(--gold2);
-      border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 22px;
-      color: var(--navy);
-    }
-    .nav-brand-text { line-height: 1.15; }
-    .nav-brand-name { font-size: 15px; font-weight: 700; color: var(--white); letter-spacing: 0.02em; }
-    .nav-brand-sub  { font-size: 10px; color: var(--gold2); letter-spacing: 0.04em; text-transform: uppercase; }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 500;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: background 0.15s, color 0.15s;
-    }
-    .nav-links a:hover { background: rgba(255,255,255,0.1); color: var(--white); }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .nav-phone {
-      color: var(--gold2);
-      font-weight: 700;
-      font-size: 14px;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
-    .btn-nav {
-      background: var(--gold2);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 13px;
-      padding: 7px 16px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.15s;
-    }
-    .btn-nav:hover { background: var(--gold); }
-
     /* ── HERO ── */
     .hero {
       background: linear-gradient(135deg, var(--navy) 0%, #2A3F6B 100%);
@@ -692,7 +613,6 @@
       .jennifer-section { grid-template-columns: 1fr; }
       .jennifer-photo { width: 120px; height: 120px; font-size: 40px; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links { display: none; }
     }
     @media (max-width: 520px) {
       .footer-grid { grid-template-columns: 1fr; }
@@ -703,28 +623,9 @@
 </head>
 <body>
 
-  <!-- ══ NAV ══ -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="https://midlandsmedicare.com/" class="nav-brand" aria-label="Midlands Medicare home">
-        <div class="nav-logo-box">M</div>
-        <div class="nav-brand-text">
-          <div class="nav-brand-name">Midlands Medicare</div>
-          <div class="nav-brand-sub">Mauldin Insurance Group</div>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="https://midlandsmedicare.com/medicare-advantage-midlands.html">Medicare Advantage</a></li>
-        <li><a href="https://midlandsmedicare.com/medicare-supplement-midlands.html">Medicare Supplement</a></li>
-        <li><a href="https://midlandsmedicare.com/turning-65-midlands.html">Turning 65</a></li>
-        <li><a href="https://midlandsmedicare.com/moving-to-south-carolina-medicare.html">Moving to SC</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a href="tel:8435092462" class="nav-phone">843-509-2462</a>
-        <a href="#get-guide" class="btn-nav">Free Guide</a>
-      </div>
-    </div>
-  </nav>
+  <!-- ══ NAV — loaded from nav.js (matches all site pages automatically) ══ -->
+  <div id="nav-placeholder"></div>
+  <script src="/nav.js"></script>
 
   <!-- ══ URGENCY STRIP ══ -->
   <div class="urgency-strip" role="alert">
