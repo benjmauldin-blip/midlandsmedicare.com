@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="/turning-65-midlands.html">Turning 65</a>
             <a href="/working-past-65-south-carolina.html">Working Past 65</a>
             <a href="/moving-to-south-carolina-medicare.html">Moving to SC</a>
+            <a href="/lake-murray-relocation-guide.html" style="color:#c9a227;font-weight:700;">🎁 Free Relocation Guide</a>
           </div>
         </div>
         <div class="nav-dropdown">
@@ -90,8 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.head.insertAdjacentHTML('beforeend', navCSS);
   const placeholder = document.getElementById('nav-placeholder');
-  if (placeholder) { placeholder.outerHTML = navHTML; }
-  else { document.body.insertAdjacentHTML('afterbegin', navHTML); }
+  if (placeholder) {
+    placeholder.outerHTML = navHTML;
+  } else {
+    document.body.insertAdjacentHTML('afterbegin', navHTML);
+  }
 
   // Mobile toggle
   setTimeout(() => {
