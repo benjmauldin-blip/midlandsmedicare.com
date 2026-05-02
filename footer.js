@@ -64,8 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><a href="/working-past-65-south-carolina.html">Working Past 65</a></li>
             <li><a href="/moving-to-south-carolina-medicare.html">Moving to SC</a></li>
             <li><a href="/medicare-lexington-sc.html">Medicare in Lexington</a></li>
+            <li><a href="/medicare-columbia-sc.html">Medicare in Columbia</a></li>
             <li><a href="/medicare-irmo-sc.html">Medicare in Irmo</a></li>
-            <li><a href="/medicare-chapin-sc.html">Medicare in Chapin</a></li>
+            <li><a href="/medicare-chapin-sc.html">Medicare in Chapin / Lake Murray</a></li>
+            <li><a href="/medicare-cayce-west-columbia-sc.html">Medicare in Cayce / W. Columbia</a></li>
+            <li><a href="/medicare-blythewood-sc.html">Medicare in Blythewood</a></li>
             <li><a href="/aca-health-insurance-midlands.html">ACA Health Insurance</a></li>
             <li><a href="/final-expense-midlands.html">Final Expense</a></li>
             <li><a href="/midlands-service-areas.html">🗺️ All Service Areas</a></li>
