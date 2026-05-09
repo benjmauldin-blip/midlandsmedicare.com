@@ -1,111 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://midlandsmedicare.com/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-lexington-sc.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-columbia-sc.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-irmo-sc.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-chapin-sc.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-blythewood-sc.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-cayce-west-columbia-sc.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-advantage-midlands.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-supplement-midlands.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/medicare-part-d-midlands.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/turning-65-midlands.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/working-past-65-south-carolina.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/moving-to-south-carolina-medicare.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/lake-murray-relocation-guide.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/aca-health-insurance-midlands.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/final-expense-midlands.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/midlands-service-areas.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://midlandsmedicare.com/quiz.html</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://midlandsmedicare.com/</loc>
+<lastmod>2026-05-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-south-carolina.html</loc>
+<lastmod>2026-05-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.95</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-lexington-sc.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-columbia-sc.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-irmo-sc.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-chapin-sc.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-blythewood-sc.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-cayce-west-columbia-sc.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-advantage-midlands.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-supplement-midlands.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/medicare-part-d-midlands.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/turning-65-midlands.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/working-past-65-south-carolina.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/moving-to-south-carolina-medicare.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/lake-murray-relocation-guide.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/aca-health-insurance-midlands.html</loc>
+<lastmod>2026-05-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/final-expense-midlands.html</loc>
+<lastmod>2026-05-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/midlands-service-areas.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://midlandsmedicare.com/quiz.html</loc>
+<lastmod>2026-05-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 </urlset>

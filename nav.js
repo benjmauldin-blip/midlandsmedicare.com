@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
       <div class="nav-links" id="nav-links">
+        <a href="/medicare-south-carolina.html" class="nav-link nav-link-featured">Medicare in SC</a>
         <div class="nav-dropdown">
           <button class="nav-drop-btn">Medicare Plans ▾</button>
           <div class="nav-drop-menu">
@@ -72,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:nowrap}
     .nav-link{font-size:13px;font-weight:600;color:rgba(255,255,255,.85);text-decoration:none;padding:6px 10px;border-radius:4px;transition:color .2s;font-family:'Source Sans 3',sans-serif;white-space:nowrap}
     .nav-link:hover{color:#c9a227}
+    .nav-link-featured{color:#c9a227;font-weight:700}
+    .nav-link-featured:hover{color:#e0b82d}
     .nav-dropdown{position:relative}
     .nav-drop-btn{background:none;border:none;font-size:13px;font-weight:600;color:rgba(255,255,255,.85);padding:6px 10px;cursor:pointer;border-radius:4px;transition:color .2s;font-family:'Source Sans 3',sans-serif;white-space:nowrap}
     .nav-drop-btn:hover{color:#c9a227}
