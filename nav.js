@@ -1,3 +1,10 @@
+// SEO: Force .html canonical version. Bounces clean URLs to .html so Google
+// stops indexing duplicates. Safe no-op for root, .html, and asset paths.
+(function() {
+  var p = window.location.pathname;
+  if (p === '/' || /\.[a-z0-9]+$/i.test(p) || p.endsWith('/')) return;
+  window.location.replace(p + '.html' + window.location.search + window.location.hash);
+})();
 // Midlands Medicare — Central Navigation
 document.addEventListener('DOMContentLoaded', function () {
   const navHTML = `
