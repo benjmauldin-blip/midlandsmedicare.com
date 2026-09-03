@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <p class="footer-tagline">Independent Medicare agents serving the SC Midlands — Lexington, Columbia, Irmo, Chapin, Lake Murray, and surrounding communities. Always free, always local.</p>
           <div class="footer-rating">
             <span>⭐⭐⭐⭐⭐</span>
-            <span>5.0 rating · 131 Google reviews</span>
+            <span>5.0 rating · 151 Google reviews</span>
           </div>
         </div>
         <div class="footer-contact">
