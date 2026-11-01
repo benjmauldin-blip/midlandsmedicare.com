@@ -1,0 +1,31 @@
+/* Midlands Medicare tools — shared styles. Navy/teal/gold to match the existing site. */
+:root{
+  --navy:#1a2e5a; --teal:#0e7490; --gold:#c9a227; --ink:#1f2933; --muted:#566373; --line:#d8e2ea;
+  --paper:#ffffff; --soft:#f0f7f9; --goldsoft:#fbf3d9; --bg:#f6fafb; --fg:#1f2933;
+  --good:#1f7a4d; --warn:#9a5b00; --bad:#b42318;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --body:"Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:18px;line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));padding-block:32px 56px}
+h1,h2,h3{font-family:var(--display);color:var(--navy);text-wrap:balance}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.1;margin:8px 0 10px}
+h2{font-size:28px;margin:36px 0 10px}
+h3{font-size:22px;margin:0 0 6px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.lede{max-width:62ch;color:var(--muted);font-size:19px;margin:0 0 24px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
+.btn{display:inline-block;font:inherit;font-weight:700;padding:12px 20px;border-radius:10px;border:2px solid var(--gold);background:var(--gold);color:var(--navy);cursor:pointer;text-decoration:none;min-height:48px}
+.btn.teal{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn.ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+button:focus-visible,input:focus-visible,a:focus-visible,label:focus-within{outline:3px solid var(--gold);outline-offset:2px}
+.callbox{margin-top:34px;background:var(--navy);color:#fff;border-radius:14px;padding:24px}
+.callbox h3{color:#fff}
+.callbox p{margin:0 0 12px;opacity:.92}
+.callbox .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.callbox .who{background:rgba(255,255,255,.08);border-radius:10px;padding:12px 14px}
+.callbox .who b{display:block}
+.callbox .who a{font-size:24px;font-weight:700;color:var(--gold);text-decoration:none;font-variant-numeric:tabular-nums}
+.fine{font-size:14px;color:var(--muted);margin-top:28px}
+@media print{.site-nav,.site-footer,.noprint{display:none!important}body{background:#fff;font-size:14px}.card{border:0;padding:0}}

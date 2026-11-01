@@ -19,46 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
       <div class="nav-links" id="nav-links">
-        <a href="/medicare-south-carolina.html" class="nav-link nav-link-featured">Medicare in SC</a>
-        <div class="nav-dropdown">
-          <button class="nav-drop-btn">Medicare Plans ▾</button>
-          <div class="nav-drop-menu">
-            <a href="/medicare-advantage-midlands.html">Medicare Advantage</a>
-            <a href="/medicare-supplement-midlands.html">Medicare Supplement</a>
-            <a href="/medicare-part-d-midlands.html">Medicare Part D</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button class="nav-drop-btn">Life Events ▾</button>
-          <div class="nav-drop-menu">
-            <a href="/turning-65-midlands.html">Turning 65</a>
-            <a href="/working-past-65-south-carolina.html">Working Past 65</a>
-            <a href="/moving-to-south-carolina-medicare.html">Moving to SC</a>
-            <a href="/lake-murray-relocation-guide.html" style="color:#c9a227;font-weight:700;">🎁 Free Relocation Guide</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button class="nav-drop-btn">Local Areas ▾</button>
-          <div class="nav-drop-menu">
-            <a href="/medicare-lexington-sc.html">Lexington</a>
-            <a href="/medicare-columbia-sc.html">Columbia</a>
-            <a href="/medicare-irmo-sc.html">Irmo</a>
-            <a href="/medicare-chapin-sc.html">Chapin & Lake Murray</a>
-            <a href="/medicare-blythewood-sc.html">Blythewood</a>
-            <a href="/medicare-cayce-west-columbia-sc.html">Cayce & West Columbia</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button class="nav-drop-btn">Other Coverage ▾</button>
-          <div class="nav-drop-menu">
-            <a href="/aca-health-insurance-midlands.html">ACA Health Insurance</a>
-            <a href="/final-expense-midlands.html">Final Expense</a>
-          </div>
-        </div>
-        <a href="/midlands-service-areas.html" class="nav-link">Service Areas</a>
+        <a href="/deadlines.html" class="nav-link nav-link-featured">Deadlines Calculator</a>
+        <a href="/checklist.html" class="nav-link">Review Checklist</a>
+        <a href="/lake-murray-relocation-guide.html" class="nav-link">Relocation Guide</a>
+        <a href="https://www.mauldininsurancegroup.com/medicare" class="nav-link">Medicare Plans</a>
         <a href="tel:+18435092462" class="nav-phone">843-509-2462</a>
         <a href="/quiz.html" class="nav-quiz">Free Quiz</a>
-        <a href="https://www.mauldininsurancegroup.com/contact" class="nav-cta" target="_blank">Free Consultation</a>
+        <a href="https://www.mauldininsurancegroup.com/contact" class="nav-cta">Free Consultation</a>
       </div>
     </div>
   </nav>`;

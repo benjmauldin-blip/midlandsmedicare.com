@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Medicare Deadlines Calculator | Midlands Medicare</title>
+<meta name="description" content="Enter your birthday to see your exact Medicare sign-up window, when coverage starts, penalty deadlines and your Medigap open enrollment dates. Free, from local SC agents." />
+<link rel="canonical" href="https://midlandsmedicare.com/deadlines.html" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta property="og:title" content="Your Medicare Deadlines Calculator | Midlands Medicare" />
+<meta property="og:description" content="Enter your birthday to see your exact Medicare sign-up window, when coverage starts, penalty deadlines and your Medigap open enrollment dates. Free, from local SC agents." />
+<meta property="og:url" content="https://midlandsmedicare.com/deadlines.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tools.css" />
+<style>
+/* Layout: one calm column. Inputs card on top, the 7-month window strip as the centerpiece, then plain-language answers. Brand: Midlands Medicare / Mauldin navy + gold. */
+.inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+label,.qlabel{display:block;font-weight:700;margin-bottom:6px}
+.hint{font-size:14px;color:var(--muted);margin-top:4px}
+input[type=date]{width:100%;font:inherit;font-size:18px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg)}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{font:inherit;font-weight:600;padding:9px 16px;border-radius:999px;border:2px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer;min-height:44px}
+.seg button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--paper)}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.example{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--warn);margin-bottom:8px}
+.big{font-size:20px;margin:0 0 6px}
+.big strong{color:var(--navy)}
+.stripwrap{overflow-x:auto;margin-top:14px}
+.strip{display:grid;grid-template-columns:repeat(7,minmax(92px,1fr));gap:6px;min-width:660px}
+.m{border-radius:10px;padding:10px 8px;text-align:center;border:1px solid var(--line);background:var(--soft)}
+.m .mn{font-weight:700;font-size:16px}
+.m .yr{font-size:13px;color:var(--muted)}
+.m .tag{font-size:12.5px;margin-top:6px;line-height:1.3}
+.m.best{background:var(--goldsoft);border-color:var(--gold)}
+.m.birth{border:2px solid var(--navy)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-top:10px}
+.sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:1px solid var(--line)}
+.answers{display:grid;gap:14px;margin-top:6px}
+.ans{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.ans:first-child{border-top:0}
+.ans .k{font-weight:700;color:var(--navy)}
+.ans .v{min-width:0}
+.pill{display:inline-block;font-size:13px;font-weight:700;padding:2px 10px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.pill.ok{background:color-mix(in srgb,var(--good) 15%,transparent);color:var(--good)}
+.pill.warn{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
+.pill.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.copied{font-size:14px;color:var(--good);align-self:center}
+@media (max-width:560px){.ans{grid-template-columns:1fr;gap:4px}}
+@media (prefers-reduced-motion:no-preference){.m{transition:background .2s}}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<main class="wrap">
+  <div class="eyebrow">Free tool · Midlands Medicare</div>
+  
+  <h1>Your Medicare deadlines, worked out for you</h1>
+  <p class="lede">Enter your birthday and answer two quick questions. You'll see the exact months you can sign up, when your coverage would start, and the dates that trigger late penalties if you miss them.</p>
+
+  <section class="card" aria-label="Your details">
+    <span class="example" id="exampleTag">Example shown · enter your own birthday</span>
+    <div class="inputs">
+      <div>
+        <label for="dob">Your date of birth</label>
+        <input type="date" id="dob" value="1962-05-18">
+        <div class="hint">Nothing you enter is saved or sent anywhere.</div>
+      </div>
+      <div>
+        <span class="qlabel" id="q1">Will you have health coverage through a current job at 65?</span>
+        <div class="seg" role="group" aria-labelledby="q1" id="work">
+          <button type="button" data-v="no" aria-pressed="true">No</button>
+          <button type="button" data-v="big" aria-pressed="false">Yes, 20+ employees</button>
+          <button type="button" data-v="small" aria-pressed="false">Yes, under 20</button>
+        </div>
+        <div class="hint">Your job or your spouse's.</div>
+      </div>
+      <div>
+        <span class="qlabel" id="q2">Already getting Social Security checks?</span>
+        <div class="seg" role="group" aria-labelledby="q2" id="ss">
+          <button type="button" data-v="no" aria-pressed="true">No</button>
+          <button type="button" data-v="yes" aria-pressed="false">Yes</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2>Your sign-up window</h2>
+  <p class="big" id="headline"></p>
+  <p id="subline" style="margin:0;color:var(--muted)"></p>
+  <div class="stripwrap"><div class="strip" id="strip" aria-label="Your 7-month Initial Enrollment Period"></div></div>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--goldsoft);border-color:var(--gold)"></span>Best months to sign up</span>
+    <span><span class="sw" style="background:var(--soft);border:2px solid var(--navy)"></span>Your Medicare month</span>
+  </div>
+
+  <h2>What it means for you</h2>
+  <div class="card"><div class="answers" id="answers"></div></div>
+
+  <div class="row">
+    <button class="btn ghost" type="button" id="copyBtn">Copy my dates</button>
+    <span class="copied" id="copied" hidden>Copied. Paste it into a text or email.</span>
+  </div>
+  <textarea id="copyBox" rows="7" readonly hidden style="width:100%;margin-top:10px;font:inherit;font-size:15px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--fg)"></textarea>
+
+  <section class="callbox noprint" aria-label="Talk to us">
+    <h3>Want someone to check this with you?</h3>
+    <p>We'll go over your dates, your doctors and your prescriptions, and help you sign up at the right time. There's no cost to talk with us.</p>
+    <div class="people">
+      <div class="who"><b>Jennifer Mauldin, Medicare</b><a href="tel:+18435092462">843-509-2462</a></div>
+      <div class="who"><b>Ben Mauldin</b><a href="tel:+18039208827">803-920-8827</a></div>
+    </div>
+    <p style="margin:14px 0 0"><a class="btn" href="https://www.mauldininsurancegroup.com/medicare">More about Medicare help</a></p>
+  </section>
+
+  <div class="fine">
+    <p>This tool gives general dates based on Medicare's standard rules for people turning 65. Your situation may be different, for example if you have a disability, ESRD, retiree coverage, COBRA or an HSA. Confirm your dates with Social Security or with us before you make a decision.</p>
+    <p>Not connected with or endorsed by the U.S. government or the federal Medicare program. Mauldin Insurance Group is an independent insurance agency based in Lexington, SC, serving all of South Carolina.</p>
+  </div>
+</main>
+
+<script>
+(function(){
+  const MN=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const MS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const state={work:"no",ss:"no"};
+  const $=id=>document.getElementById(id);
+  const add=(y,m,k)=>{const t=y*12+m+k;return{y:Math.floor(t/12),m:((t%12)+12)%12}};
+  const mlabel=o=>MN[o.m]+" "+o.y;
+  const first=o=>MN[o.m]+" 1, "+o.y;
+  const last=o=>{const d=new Date(o.y,o.m+1,0).getDate();return MN[o.m]+" "+d+", "+o.y};
+  const cmp=(a,b)=>(a.y*12+a.m)-(b.y*12+b.m);
+
+  function compute(){
+    const v=$("dob").value; if(!v) return null;
+    const [y,mo,d]=v.split("-").map(Number); const m=mo-1;
+    const b65={y:y+65,m:m,d:d};
+    // Medicare month: the month you turn 65, or the month before if your birthday is on the 1st.
+    const E = d===1 ? add(b65.y,b65.m,-1) : {y:b65.y,m:b65.m};
+    const iepStart=add(E.y,E.m,-3), iepEnd=add(E.y,E.m,3);
+    const months=[]; for(let k=-3;k<=3;k++) months.push({k,...add(E.y,E.m,k)});
+    const covEarliest=E;
+    const birthMonth={y:b65.y,m:b65.m};
+    // Medigap open enrollment: 6 months starting the first month you're 65 and have Part B.
+    const mgStart = cmp(covEarliest,birthMonth)<0 ? birthMonth : covEarliest;
+    const mgEnd=add(mgStart.y,mgStart.m,5);
+    return {y,m,d,b65,E,iepStart,iepEnd,months,covEarliest,mgStart,mgEnd};
+  }
+
+  function nextAEP(){
+    const t=new Date(); let yr=t.getFullYear();
+    if(t>new Date(yr,11,7,23,59)) yr++;
+    return yr;
+  }
+
+  function render(){
+    const r=compute(); if(!r) return;
+    const birthTxt=MN[r.b65.m]+" "+r.b65.d+", "+r.b65.y;
+    $("headline").innerHTML="You turn 65 on <strong>"+birthTxt+"</strong>. Your sign-up window runs <strong>"+first(r.iepStart)+"</strong> through <strong>"+last(r.iepEnd)+"</strong>.";
+    $("subline").textContent = r.d===1
+      ? "Because your birthday is on the 1st, Medicare counts you as turning 65 the month before, so everything starts a month earlier."
+      : "That's 7 months: the 3 months before your birthday month, your birthday month, and the 3 months after.";
+
+    const strip=$("strip"); strip.innerHTML="";
+    r.months.forEach(o=>{
+      const el=document.createElement("div");
+      const best=o.k<0, isE=o.k===0;
+      el.className="m"+(best?" best":"")+(isE?" birth":"");
+      let tag;
+      if(best) tag="Sign up now → coverage starts "+MS[r.E.m]+" 1";
+      else { const c=add(o.y,o.m,1); tag="Sign up now → coverage starts "+MS[c.m]+" 1"; }
+      if(isE) tag="Your Medicare month. "+tag;
+      el.innerHTML='<div class="mn">'+MS[o.m]+'</div><div class="yr">'+o.y+'</div><div class="tag">'+tag+'</div>';
+      strip.appendChild(el);
+    });
+
+    const A=[];
+    const aep=nextAEP();
+    if(state.ss==="yes"){
+      A.push(["Signing up","You'll usually be signed up for Parts A and B automatically. Your red, white and blue card should arrive about 3 months before "+MN[r.E.m]+". You can turn down Part B if you have qualifying job coverage."]);
+    } else {
+      A.push(["Signing up","You sign up through Social Security, online at ssa.gov, by phone or in person. It isn't automatic unless you're already getting Social Security checks."]);
+    }
+    if(state.work==="big"){
+      A.push(["Part B",'You can wait to take Part B without a penalty while you have coverage from current work at a company with 20 or more employees. <span class="pill ok">No penalty while covered</span><br>When the job or the coverage ends, you have 8 months to sign up. Don\'t let that window pass.']);
+      A.push(["Part A","Most people take Part A at 65 because it's usually premium-free. If you put money in an HSA, talk to us first. Part A can reach back up to 6 months, so HSA contributions need to stop ahead of time."]);
+      A.push(["Drug coverage","No Part D penalty as long as your job's drug coverage is \"creditable\" (as good as Medicare's). Your plan sends a notice each fall that tells you. Keep it."]);
+      A.push(["Medigap","Your 6-month Medigap open enrollment starts when you take Part B, whenever that is. During that window, companies can't turn you down or charge more for health problems. Plan it carefully."]);
+    } else {
+      if(state.work==="small"){
+        A.push(["Heads up",'With fewer than 20 employees, Medicare usually pays first and your job plan pays second. Most people in this spot should sign up for Part B during their window. <span class="pill warn">Check with your employer\'s plan</span>']);
+      }
+      A.push(["Coverage start","Sign up in "+MN[r.iepStart.m]+", "+MN[add(r.iepStart.y,r.iepStart.m,1).m]+" or "+MN[add(r.iepStart.y,r.iepStart.m,2).m]+" and your coverage starts <strong>"+first(r.covEarliest)+"</strong>, with no gap. Wait until your Medicare month or later and coverage starts the 1st of the month after you sign up."]);
+      A.push(["Late penalty",'If you miss the window, the next chance is January 1 to March 31, with coverage the month after. The Part B penalty is 10% added to your premium for each full year you went without it, <strong>for as long as you have Part B</strong>. <span class="pill bad">Deadline: '+last(r.iepEnd)+'</span>']);
+      A.push(["Drug coverage",'Pick a drug plan (Part D or a Medicare Advantage plan with drug coverage) by '+last(r.iepEnd)+'. Going 63 days or more without creditable drug coverage adds a permanent penalty of 1% per month you went without.']);
+      A.push(["Medigap",'If you start Part B on '+first(r.covEarliest)+', your 6-month Medigap open enrollment runs <strong>'+first(r.mgStart)+' through '+last(r.mgEnd)+'</strong>. During that time, companies can\'t turn you down or charge more for health problems. <span class="pill ok">Best time to buy a supplement</span>']);
+    }
+    A.push(["Every year after","Annual Enrollment runs October 15 through December 7 each year. The next one starts October 15, "+aep+". If you're in a Medicare Advantage plan, you get one more chance to switch from January 1 through March 31."]);
+
+    $("answers").innerHTML=A.map(a=>'<div class="ans"><div class="k">'+a[0]+'</div><div class="v">'+a[1]+'</div></div>').join("");
+
+    window.__summary="My Medicare dates (from MidlandsMedicare.com)\n"+
+      "Turn 65: "+birthTxt+"\n"+
+      "Sign-up window: "+first(r.iepStart)+" to "+last(r.iepEnd)+"\n"+
+      (state.work==="big" ? "Part B: can wait while covered by a 20+ employee job; 8 months to sign up after it ends\n"
+        : "Sign up by "+last(add(r.E.y,r.E.m,-1))+" for coverage starting "+first(r.covEarliest)+"\nPenalty deadline: "+last(r.iepEnd)+"\nMedigap open enrollment: "+first(r.mgStart)+" to "+last(r.mgEnd)+"\n")+
+      "Questions? Jennifer Mauldin 843-509-2462 · Ben Mauldin 803-920-8827";
+  }
+
+  function seg(id,key){
+    $(id).addEventListener("click",e=>{
+      const b=e.target.closest("button"); if(!b) return;
+      state[key]=b.dataset.v;
+      [...$(id).querySelectorAll("button")].forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));
+      render();
+    });
+  }
+  seg("work","work"); seg("ss","ss");
+  $("dob").addEventListener("input",()=>{ $("exampleTag").hidden=true; render(); });
+  $("copyBtn").addEventListener("click",()=>{
+    const done=()=>{ $("copied").hidden=false; setTimeout(()=>$("copied").hidden=true,4000); };
+    const fallback=()=>{ const t=$("copyBox"); t.value=window.__summary; t.hidden=false; t.focus(); t.select(); };
+    try{ navigator.clipboard.writeText(window.__summary).then(done).catch(fallback); }catch(e){ fallback(); }
+  });
+  render();
+})();
+</script>
+<div id="footer-placeholder"></div>
+<script src="/nav.js"></script>
+<script src="/footer.js"></script>
+</body>
+</html>

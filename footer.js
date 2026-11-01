@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
               <span class="footer-logo-sub">Mauldin Insurance Group</span>
             </div>
           </div>
-          <p class="footer-tagline">Independent Medicare agents serving the SC Midlands — Lexington, Columbia, Irmo, Chapin, Lake Murray, and surrounding communities. Always free, always local.</p>
+          <p class="footer-tagline">Free Medicare tools from independent agents based in Lexington, SC, serving the Midlands and all of South Carolina.</p>
           <div class="footer-rating">
             <span>⭐⭐⭐⭐⭐</span>
-            <span>5.0 rating · 151 Google reviews</span>
+            <span>5.0 rating on Google</span>
           </div>
         </div>
         <div class="footer-contact">
@@ -51,32 +51,23 @@ document.addEventListener('DOMContentLoaded', function () {
           <p><a href="tel:+18039208827">803-920-8827</a></p>
           <p><a href="mailto:ben@mauldininsurancegroup.com">ben@mauldininsurancegroup.com</a></p>
           <p style="margin-top:14px;"><a href="https://www.mauldininsurancegroup.com" target="_blank">MauldinInsuranceGroup.com →</a></p>
-          <p><a href="https://www.southcarolinamedicareagency.com" target="_blank">SCMedicareAgency.com →</a></p>
-          <p><a href="https://www.mauldininsurance.com" target="_blank">Auto, Home &amp; Business →</a></p>
+          <p><a href="https://www.mauldininsurancegroup.com/property-and-casualty" target="_blank">Auto, Home &amp; Business →</a></p>
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/medicare-advantage-midlands.html">Medicare Advantage</a></li>
-            <li><a href="/medicare-supplement-midlands.html">Medicare Supplement</a></li>
-            <li><a href="/medicare-part-d-midlands.html">Medicare Part D</a></li>
-            <li><a href="/turning-65-midlands.html">Turning 65 in SC</a></li>
-            <li><a href="/working-past-65-south-carolina.html">Working Past 65</a></li>
-            <li><a href="/moving-to-south-carolina-medicare.html">Moving to SC</a></li>
-            <li><a href="/medicare-lexington-sc.html">Medicare in Lexington</a></li>
-            <li><a href="/medicare-columbia-sc.html">Medicare in Columbia</a></li>
-            <li><a href="/medicare-irmo-sc.html">Medicare in Irmo</a></li>
-            <li><a href="/medicare-chapin-sc.html">Medicare in Chapin / Lake Murray</a></li>
-            <li><a href="/medicare-cayce-west-columbia-sc.html">Medicare in Cayce / W. Columbia</a></li>
-            <li><a href="/medicare-blythewood-sc.html">Medicare in Blythewood</a></li>
-            <li><a href="/aca-health-insurance-midlands.html">ACA Health Insurance</a></li>
-            <li><a href="/final-expense-midlands.html">Final Expense</a></li>
-            <li><a href="/midlands-service-areas.html">🗺️ All Service Areas</a></li>
+            <li><a href="/deadlines.html">Medicare Deadlines Calculator</a></li>
+            <li><a href="/quiz.html">Medicare Coverage Quiz</a></li>
+            <li><a href="/checklist.html">Medicare Review Checklist</a></li>
+            <li><a href="/lake-murray-relocation-guide.html">Lake Murray Relocation Guide</a></li>
+            <li><a href="https://www.mauldininsurancegroup.com/medicare">Medicare Plans in SC</a></li>
+            <li><a href="https://www.mauldininsurancegroup.com/health-insurance">Health Insurance</a></li>
+            <li><a href="https://www.mauldininsurancegroup.com/life-insurance-lexington-sc">Life Insurance</a></li>
           </ul>
         </div>
       </div>
       <p class="footer-disclaimer">By dialing the phone number you will contact a licensed insurance agent. We do not offer every plan in your area. Currently, we represent 6 organizations which offer 52 products in your area. Please contact Medicare.gov, 1-800-MEDICARE (TTY users call 1-877-486-2048) 24 hours a day/7 days a week, or your local State Health Insurance Program (SHIP) to get information on all your options. JWM_WEB_060125_C</p>
-      <p class="footer-copy">&copy; 2026 Mauldin Insurance Group. All rights reserved. | Lexington, SC | Serving the SC Midlands</p>
+      <p class="footer-copy">&copy; 2026 Mauldin Insurance Group. All rights reserved. | Based in Lexington, SC | Serving all of South Carolina</p>
     </div>
   </footer>`;
 

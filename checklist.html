@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What to Bring to Your Medicare Review | Midlands Medicare</title>
+<meta name="description" content="A printable checklist of what to gather before a Medicare plan review: cards, doctors, prescriptions, pharmacy and questions. Free from local SC Medicare agents." />
+<link rel="canonical" href="https://midlandsmedicare.com/checklist.html" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta property="og:title" content="What to Bring to Your Medicare Review | Midlands Medicare" />
+<meta property="og:description" content="A printable checklist of what to gather before a Medicare plan review: cards, doctors, prescriptions, pharmacy and questions. Free from local SC Medicare agents." />
+<meta property="og:url" content="https://midlandsmedicare.com/checklist.html" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/tools.css" />
+<style>
+.list{display:grid;gap:0;padding:6px 22px}
+.item{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start;padding:14px 0;border-top:1px solid var(--line);cursor:pointer}
+.item:first-child{border-top:0}
+.item input{position:absolute;opacity:0;width:1px;height:1px}
+.item .box{width:28px;height:28px;border:2px solid var(--teal);border-radius:7px;margin-top:2px;display:grid;place-items:center;background:var(--paper)}
+.item input:checked + .box{background:var(--teal)}
+.item input:checked + .box::after{content:"";width:8px;height:14px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-2px)}
+.item input:focus-visible + .box{outline:3px solid var(--gold);outline-offset:2px}
+.item .txt{min-width:0}
+.item .txt b{display:block}
+.item .txt span{color:var(--muted);font-size:16px}
+.item input:checked ~ .txt b{color:var(--muted)}
+.progress{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 18px}
+.progress .bar{flex:1;min-width:160px;height:12px;background:var(--soft);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.progress .bar span{display:block;height:100%;width:0;background:var(--teal);transition:width .25s}
+.progress #count{font-weight:700;color:var(--navy)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+@media (prefers-reduced-motion:reduce){.progress .bar span{transition:none}}
+@media print{.item .box{border-color:#000}}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<main class="wrap">
+  <div class="eyebrow">Free checklist · Midlands Medicare</div>
+  <h1>What to bring to your Medicare review</h1>
+  <p class="lede">Having these ready makes your review faster and more accurate, whether you meet with us or look at plans on your own. Check items off as you gather them.</p>
+  <div class="progress card noprint" aria-live="polite"><div class="bar"><span id="bar"></span></div><div id="count">0 of 12 gathered</div></div>
+  <h2>Before the appointment</h2>
+  <div class="card list">
+    <label class="item" for="c-card"><input type="checkbox" id="c-card" data-k="card"><span class="box" aria-hidden="true"></span><span class="txt"><b>Your red, white and blue Medicare card</b><span>Or the letter from Social Security with your Part A and Part B start dates.</span></span></label>
+    <label class="item" for="c-plan"><input type="checkbox" id="c-plan" data-k="plan"><span class="box" aria-hidden="true"></span><span class="txt"><b>The cards for any plan you have now</b><span>Medicare Advantage, supplement, drug plan, or coverage from a job or retirement.</span></span></label>
+    <label class="item" for="c-notice"><input type="checkbox" id="c-notice" data-k="notice"><span class="box" aria-hidden="true"></span><span class="txt"><b>Letters from your current plan</b><span>Especially the Annual Notice of Change that arrives each fall. It shows what's changing next year.</span></span></label>
+    <label class="item" for="c-help"><input type="checkbox" id="c-help" data-k="help"><span class="box" aria-hidden="true"></span><span class="txt"><b>Any Extra Help or Medicaid letters</b><span>These can change which plans and costs are open to you.</span></span></label>
+  </div>
+  <h2>Your doctors and drugs</h2>
+  <div class="card list">
+    <label class="item" for="c-docs"><input type="checkbox" id="c-docs" data-k="docs"><span class="box" aria-hidden="true"></span><span class="txt"><b>A list of your doctors</b><span>Primary care and every specialist, with the practice name and city. Include anyone you'd want to see in the future.</span></span></label>
+    <label class="item" for="c-rx"><input type="checkbox" id="c-rx" data-k="rx"><span class="box" aria-hidden="true"></span><span class="txt"><b>Every prescription you take</b><span>Name, strength and how often. Bringing the bottles works too.</span></span></label>
+    <label class="item" for="c-pharm"><input type="checkbox" id="c-pharm" data-k="pharm"><span class="box" aria-hidden="true"></span><span class="txt"><b>Your pharmacy</b><span>Where you fill prescriptions now, and whether you use mail order.</span></span></label>
+    <label class="item" for="c-hosp"><input type="checkbox" id="c-hosp" data-k="hosp"><span class="box" aria-hidden="true"></span><span class="txt"><b>Your hospital</b><span>The hospital system you'd want to use, such as Lexington Medical Center, Prisma Health or MUSC.</span></span></label>
+  </div>
+  <h2>Things to think about</h2>
+  <div class="card list">
+    <label class="item" for="c-budget"><input type="checkbox" id="c-budget" data-k="budget"><span class="box" aria-hidden="true"></span><span class="txt"><b>What you can comfortably pay each month</b><span>For premiums, plus how you feel about copays when you use care.</span></span></label>
+    <label class="item" for="c-travel"><input type="checkbox" id="c-travel" data-k="travel"><span class="box" aria-hidden="true"></span><span class="txt"><b>Travel plans</b><span>Time out of state each year, or a second home. Some plans only cover care close to home.</span></span></label>
+    <label class="item" for="c-upcoming"><input type="checkbox" id="c-upcoming" data-k="upcoming"><span class="box" aria-hidden="true"></span><span class="txt"><b>Upcoming care</b><span>A planned surgery, new diagnosis or new prescription you know is coming.</span></span></label>
+    <label class="item" for="c-qs"><input type="checkbox" id="c-qs" data-k="qs"><span class="box" aria-hidden="true"></span><span class="txt"><b>Your questions</b><span>Write them down so nothing gets missed.</span></span></label>
+  </div>
+  <div class="row noprint">
+    <button class="btn ghost" type="button" id="printBtn">Print this checklist</button>
+    <button class="btn ghost" type="button" id="resetBtn">Clear checkmarks</button>
+  </div>
+  <p class="fine">Nothing you check here is sent anywhere. It's only remembered on this device so you can come back to it.</p>
+  <section class="callbox noprint" aria-label="Talk to us">
+    <h3>Ready for your review?</h3>
+    <p>Bring this list to a free review with us. We'll check your doctors, your drugs and your costs across the plans we offer.</p>
+    <div class="people">
+      <div class="who"><b>Jennifer Mauldin, Medicare</b><a href="tel:+18435092462">843-509-2462</a></div>
+      <div class="who"><b>Ben Mauldin</b><a href="tel:+18039208827">803-920-8827</a></div>
+    </div>
+  </section>
+</main>
+<script>
+(function(){
+  const boxes=[...document.querySelectorAll('.item input')];
+  const KEY='mm-checklist';
+  let saved={}; try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  boxes.forEach(b=>{b.checked=!!saved[b.dataset.k]});
+  function update(){
+    const n=boxes.filter(b=>b.checked).length;
+    document.getElementById('count').textContent=n+' of '+boxes.length+' gathered'+(n===boxes.length?'. You\'re ready.':'');
+    document.getElementById('bar').style.width=(n/boxes.length*100)+'%';
+    const s={}; boxes.forEach(b=>{if(b.checked)s[b.dataset.k]=1});
+    try{localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}
+  }
+  boxes.forEach(b=>b.addEventListener('change',update));
+  document.getElementById('printBtn').addEventListener('click',()=>window.print());
+  document.getElementById('resetBtn').addEventListener('click',()=>{boxes.forEach(b=>b.checked=false);update();});
+  update();
+})();
+</script>
+<div id="footer-placeholder"></div>
+<script src="/nav.js"></script>
+<script src="/footer.js"></script>
+</body>
+</html>
