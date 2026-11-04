@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <p><a href="mailto:ben@mauldininsurancegroup.com">ben@mauldininsurancegroup.com</a></p>
           <p style="margin-top:14px;"><a href="https://www.mauldininsurancegroup.com" target="_blank">MauldinInsuranceGroup.com →</a></p>
           <p><a href="https://www.mauldininsurancegroup.com/property-and-casualty" target="_blank">Auto, Home &amp; Business →</a></p>
+          <p><a href="https://mauldininsurance.com/" target="_blank">Free home &amp; auto insurance tools →</a></p>
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
@@ -60,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><a href="/quiz.html">Medicare Coverage Quiz</a></li>
             <li><a href="/checklist.html">Medicare Review Checklist</a></li>
             <li><a href="/lake-murray-relocation-guide.html">Lake Murray Relocation Guide</a></li>
+            <li><a href="https://southcarolinamedicareagency.com/move-checker.html">Moving with Medicare Checker</a></li>
+            <li><a href="https://www.mauldininsurancegroup.com/2027-medicare-advantage-midlands">2027 Medicare Advantage by County</a></li>
             <li><a href="https://www.mauldininsurancegroup.com/medicare">Medicare Plans in SC</a></li>
             <li><a href="https://www.mauldininsurancegroup.com/health-insurance">Health Insurance</a></li>
             <li><a href="https://www.mauldininsurancegroup.com/life-insurance-lexington-sc">Life Insurance</a></li>
