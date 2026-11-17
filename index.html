@@ -16,69 +16,128 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/tools.css" />
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://midlandsmedicare.com/#website","name":"Midlands Medicare","url":"https://midlandsmedicare.com/","publisher":{"@id":"https://www.mauldininsurancegroup.com/#organization"}},{"@type":"InsuranceAgency","@id":"https://www.mauldininsurancegroup.com/#organization","name":"Mauldin Insurance Group","url":"https://www.mauldininsurancegroup.com/","telephone":"+1-843-509-2462","areaServed":{"@type":"State","name":"South Carolina"}},{"@type":"WebApplication","name":"Medicare Deadlines Calculator","url":"https://midlandsmedicare.com/deadlines.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@id":"https://www.mauldininsurancegroup.com/#organization"}}]}</script><style>
-.hero{background:var(--navy);color:#fff}
-.hero .wrap{padding-block:48px 44px}
-.hero h1{color:#fff;max-width:18ch}
-.hero .lede{color:rgba(255,255,255,.85)}
-.hero .eyebrow{color:var(--gold)}
-.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:-22px}
-.tool{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--fg)}
-.tool:hover{border-color:var(--teal)}
-.tool .tag{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
-.tool h3{margin:0}
-.tool p{margin:0;color:var(--muted);font-size:17px;flex:1}
-.tool .go{font-weight:700;color:var(--navy)}
-.tool.feature{border:2px solid var(--gold)}
-.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.split p{margin:0 0 10px}
+body{background:linear-gradient(#0c1a2e 0 260px,var(--bg) 260px)}
+.w{max-width:1200px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.hero2{background:#0c1a2e;color:#fff;margin-top:-12px;padding-top:0;position:relative;overflow:hidden}
+.hero2::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 420px at 85% 20%,rgba(212,165,42,.18),transparent 65%),radial-gradient(800px 500px at 0% 100%,rgba(47,93,80,.45),transparent 65%);pointer-events:none}
+.hero2 .g{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center;padding-block:72px 84px}
+.hero2 .intro{font-size:16px;color:rgba(255,255,255,.7);margin:0 0 18px}
+.hero2 h1{color:#fff;font-size:clamp(40px,6.4vw,74px);margin:0 0 22px;max-width:14ch}
+.hero2 .lede{color:rgba(255,255,255,.8);max-width:48ch}
+.hero2 .jump{display:flex;flex-wrap:wrap;gap:10px}
+.hero2 .jump a{color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:10px 16px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);min-height:44px;display:inline-flex;align-items:center}
+.hero2 .jump a:hover{background:rgba(255,255,255,.14)}
+.calc{background:#f5f6f2;color:#14202f;border-radius:28px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.calc h2{font-size:24px;margin:0 0 4px;line-height:1.15;color:#14202f}
+.calc .sub{margin:0 0 20px;color:#55636f;font-size:16px}
+.calc .row{display:grid;grid-template-columns:1.3fr 1fr;gap:12px;margin-bottom:12px}
+.calc label{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.calc select,.calc input[type=number]{width:100%;font:inherit;font-size:18px;padding:10px 12px;border:1.5px solid #dfe5e8;border-radius:12px;background:#fff;color:#14202f;min-height:48px}
+.calc .chk{display:flex;gap:10px;align-items:center;font-size:16px;margin:4px 0 18px;cursor:pointer}
+.calc .chk input{width:22px;height:22px;accent-color:#2f5d50}
+.calc .out{border-radius:18px;background:#0c1a2e;color:#fff;padding:20px 22px}
+.calc .out small{display:block;font-size:15px;color:rgba(255,255,255,.72)}
+.calc .out strong{display:block;font-family:var(--display);font-size:clamp(28px,4vw,38px);line-height:1.08;letter-spacing:-.025em;color:#e8bf4a;margin:6px 0 10px}
+.calc .out p{margin:0;font-size:15px;color:rgba(255,255,255,.78)}
+.calc .more{display:inline-block;margin-top:16px;font-weight:700;color:#2f5d50;text-decoration:none}
+.calc .more:hover{text-decoration:underline}
+@media (max-width:900px){.hero2 .g{grid-template-columns:1fr;gap:36px;padding-block:52px 56px}}
+.s{padding-top:88px}
+.s .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:28px}
+.s .head h2{font-size:clamp(32px,4.6vw,52px);line-height:1.02;margin:0}
+.s .head p{margin:0;color:var(--muted);max-width:48ch}
+@media (max-width:760px){.s{padding-top:64px}.s .head{grid-template-columns:1fr;gap:12px}}
+.bento{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.b{display:flex;flex-direction:column;justify-content:space-between;gap:16px;text-decoration:none;color:var(--fg);background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;min-height:210px}
+.b:hover{border-color:var(--teal)}
+.b h3{font-size:26px;line-height:1.1;margin:0 0 8px}
+.b p{margin:0;color:var(--muted);font-size:17px}
+.b .kind{font-size:14px;font-weight:700;color:var(--teal)}
+.b .go{font-weight:700}
+.b.dark{background:#2f5d50;border-color:#2f5d50;color:#fff}.b.dark h3{color:#fff}.b.dark p,.b.dark .kind{color:rgba(255,255,255,.82)}
+.b.gold{background:#d4a52a;border-color:#d4a52a;color:#0c1a2e}.b.gold h3{color:#0c1a2e}.b.gold p,.b.gold .kind{color:rgba(12,26,46,.78)}
+@media (max-width:700px){.bento{grid-template-columns:1fr}}
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.person{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.person .av{width:72px;height:72px;border-radius:50%;background:linear-gradient(160deg,#2f5d50,#0c1a2e);color:#e8bf4a;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:28px}
+.person h3{margin:2px 0 6px;font-size:24px}
+.person p{margin:0 0 12px;color:var(--muted)}
+.person a.ph{font-family:var(--display);font-weight:700;font-size:24px;color:var(--fg);text-decoration:none;letter-spacing:-.02em}
+.person a.ph:hover{color:var(--teal)}
+@media (max-width:760px){.people{grid-template-columns:1fr}}
+.more-link{margin-top:20px;color:var(--muted)}
+.more-link a{color:var(--teal);font-weight:700}
+.mig-reads{max-width:1200px!important}
+@media (prefers-color-scheme: dark){.b,.person{background:#14223a}}
 </style>
 </head>
 <body>
 <div id="nav-placeholder"></div>
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Free Medicare tools for the SC Midlands</div>
+<main id="main">
+<section class="hero2"><div class="w g">
+  <div>
+    <p class="intro">Free Medicare tools for the SC Midlands</p>
     <h1>Get your Medicare dates and questions sorted</h1>
     <p class="lede">Simple tools from Jennifer and Ben Mauldin, local independent agents based in Lexington. Use them on your own, then call us if you want a second set of eyes. There's no cost either way.</p>
+    <div class="jump"><a href="/quiz.html">Coverage gap quiz</a><a href="/checklist.html">Review checklist</a><a href="/lake-murray-relocation-guide.html">Moving to Lake Murray</a></div>
   </div>
-</header>
-<main class="wrap" style="padding-top:0">
-  <div class="tools">
-    <a class="tool feature" href="/deadlines.html">
-      <span class="tag">Calculator</span>
-      <h3>Your Medicare deadlines</h3>
-      <p>Enter your birthday and see your exact sign-up window, when coverage starts, and the dates that trigger late penalties.</p>
-      <span class="go">Find my dates →</span>
-    </a>
-    <a class="tool" href="/quiz.html">
-      <span class="tag">Quiz</span>
-      <h3>Will Medicare leave you exposed?</h3>
-      <p>A few quick questions about your health, budget and coverage. See where the gaps are before they cost you.</p>
-      <span class="go">Take the quiz →</span>
-    </a>
-    <a class="tool" href="/checklist.html">
-      <span class="tag">Checklist</span>
-      <h3>What to bring to your review</h3>
-      <p>Gather your cards, doctors and prescriptions so your plan review is quick and accurate.</p>
-      <span class="go">Open the checklist →</span>
-    </a>
-    <a class="tool" href="/lake-murray-relocation-guide.html">
-      <span class="tag">Free guide</span>
-      <h3>Moving to Lake Murray?</h3>
-      <p>Our relocation guide covers what changes with Medicare when you move to South Carolina.</p>
-      <span class="go">Get the guide →</span>
-    </a>
+  <div class="calc" id="iep">
+    <h2>When can I sign up for Medicare?</h2>
+    <p class="sub">Pick your birthday month and year to see your first sign-up window.</p>
+    <div class="row">
+      <div><label for="bm">Birthday month</label><select id="bm"></select></div>
+      <div><label for="by">Birth year</label><input type="number" id="by" inputmode="numeric" min="1940" max="2000" value="1962"></div>
+    </div>
+    <label class="chk"><input type="checkbox" id="b1"> My birthday is on the 1st of the month</label>
+    <div class="out" aria-live="polite">
+      <small>Your initial enrollment window</small>
+      <strong id="iepOut">Mar 1, 2027 to Sep 30, 2027</strong>
+      <p id="iepTxt">Sign up in the first three months and coverage starts June 1, 2027.</p>
+    </div>
+    <a class="more" href="/deadlines.html">See every date, including late penalty deadlines</a>
   </div>
+</div></section>
 
-  <h2>Who's behind these tools</h2>
-  <div class="split">
-    <div class="card"><h3>Jennifer Mauldin</h3><p>Leads our Medicare practice and helps people across South Carolina compare Medicare Advantage, supplement and drug plans every year.</p><p><b>843-509-2462</b></p></div>
-    <div class="card"><h3>Ben Mauldin</h3><p>Co-owner of Mauldin Insurance Group. Handles life, home, auto and business coverage, and works alongside Jennifer on Medicare.</p><p><b>803-920-8827</b></p></div>
+<section class="s w" id="tools">
+  <div class="head"><h2>Free Medicare tools</h2><p>Use them on your own, any time. Nothing to sign up for.</p></div>
+  <div class="bento">
+    <a class="b" href="/deadlines.html"><div><span class="kind">Calculator</span><h3>Your Medicare deadlines</h3><p>Enter your birthday and see your exact sign-up window, when coverage starts, and the dates that trigger late penalties.</p></div><span class="go">Find my dates</span></a>
+    <a class="b dark" href="/quiz.html"><div><span class="kind">Quiz</span><h3>Will Medicare leave you exposed?</h3><p>A few quick questions about your health, budget and coverage. See where the gaps are before they cost you.</p></div><span class="go">Take the quiz</span></a>
+    <a class="b gold" href="/checklist.html"><div><span class="kind">Checklist</span><h3>What to bring to your review</h3><p>Gather your cards, doctors and prescriptions so your plan review is quick and accurate.</p></div><span class="go">Open the checklist</span></a>
+    <a class="b" href="/lake-murray-relocation-guide.html"><div><span class="kind">Free guide</span><h3>Moving to Lake Murray?</h3><p>Our relocation guide covers what changes with Medicare when you move to South Carolina.</p></div><span class="go">Get the guide</span></a>
   </div>
-  <p style="margin-top:18px">For plan details, coverage options and everything else we do, visit <a href="https://www.mauldininsurancegroup.com/medicare">MauldinInsuranceGroup.com</a>.</p>
+</section>
 
+<section class="s w">
+  <div class="head"><h2>Who's behind these tools</h2><p>Two local agents in Lexington. When you call, you get one of us.</p></div>
+  <div class="people">
+    <div class="person"><div class="av" aria-hidden="true">JM</div><div><h3>Jennifer Mauldin</h3><p>Leads our Medicare practice and helps people across South Carolina compare Medicare Advantage, supplement and drug plans every year.</p><a class="ph" href="tel:+18435092462">843-509-2462</a></div></div>
+    <div class="person"><div class="av" aria-hidden="true">BM</div><div><h3>Ben Mauldin</h3><p>Co-owner of Mauldin Insurance Group. Handles life, home, auto and business coverage, and works alongside Jennifer on Medicare.</p><a class="ph" href="tel:+18039208827">803-920-8827</a></div></div>
+  </div>
+  <p class="more-link">For plan details, coverage options and everything else we do, visit <a href="https://www.mauldininsurancegroup.com/medicare">MauldinInsuranceGroup.com</a>.</p>
+</section>
+
+<div class="w">
 <section class="mig-reads" aria-labelledby="mrh"><style>.mig-reads{max-width:900px;margin:32px auto 0;padding:0 16px;box-sizing:border-box}.mig-reads h2{font-size:24px;margin:0 0 12px}.mig-reads .mr-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.mig-reads a{display:block;background:var(--paper,#fff);border:1px solid var(--line,#d8e2ea);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--navy,#1a2e5a);font-weight:700;line-height:1.35}.mig-reads a:hover{border-color:var(--teal,#0e7490)}.mig-reads a span{display:block;font-weight:400;font-size:14px;color:var(--muted,#566373);margin-top:6px}.wrap .mig-reads{padding:0}</style><h2 id="mrh">Read more on our blog</h2><div class="mr-g"><a href="https://www.mauldininsurancegroup.com/blogs/turning-65-in-lexington--sc--7-medicare-deadlines-that-can-cost-you-money-if-you-miss-them">Turning 65 in Lexington? 7 Medicare deadlines that can cost you money<span>Read on MauldinInsuranceGroup.com →</span></a><a href="https://www.mauldininsurancegroup.com/blogs/medicare-enrollment-periods-explained--iep--aep--and-seps-in-columbia--sc">Medicare enrollment periods explained: IEP, AEP and SEPs<span>Read on MauldinInsuranceGroup.com →</span></a><a href="https://www.mauldininsurancegroup.com/blogs/medicare-advantage-vs--medigap-in-south-carolina--how-to-actually-compare-the-two-in-2026">Medicare Advantage vs. Medigap in SC: how to compare them<span>Read on MauldinInsuranceGroup.com →</span></a></div></section>
+</div>
 </main>
+<script>
+(function(){
+  var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var S=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var bm=document.getElementById('bm'),by=document.getElementById('by'),b1=document.getElementById('b1');
+  M.forEach(function(n,i){var o=document.createElement('option');o.value=i;o.textContent=n;if(i===5)o.selected=true;bm.appendChild(o);});
+  function run(){
+    var y=parseInt(by.value,10);if(!(y>=1900&&y<=2100))return;
+    var m=+bm.value,t65=new Date(y+65,m,1);if(b1.checked)t65=new Date(t65.getFullYear(),t65.getMonth()-1,1);
+    var s=new Date(t65.getFullYear(),t65.getMonth()-3,1),e=new Date(t65.getFullYear(),t65.getMonth()+4,0);
+    var f=function(d){return S[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear()};
+    document.getElementById('iepOut').textContent=f(s)+' to '+f(e);
+    document.getElementById('iepTxt').textContent='Sign up in the first three months and coverage starts '+M[t65.getMonth()]+' 1, '+t65.getFullYear()+'.';
+  }
+  [bm,by,b1].forEach(function(el){el.addEventListener('input',run);el.addEventListener('change',run);});run();
+})();
+</script>
 <div id="footer-placeholder"></div>
 <script src="/nav.js"></script>
 <script src="/footer.js"></script>

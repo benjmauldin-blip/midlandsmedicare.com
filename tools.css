@@ -1,9 +1,9 @@
 /* Midlands Medicare tools — shared styles. Navy/teal/gold to match the existing site. */
 :root{
-  --navy:#1a2e5a; --teal:#0e7490; --gold:#c9a227; --ink:#1f2933; --muted:#566373; --line:#d8e2ea;
-  --paper:#ffffff; --soft:#f0f7f9; --goldsoft:#fbf3d9; --bg:#f6fafb; --fg:#1f2933;
+  --navy:#0c1a2e; --teal:#2f5d50; --gold:#d4a52a; --ink:#14202f; --muted:#55636f; --line:#dfe5e8;
+  --paper:#ffffff; --soft:#eef1ee; --goldsoft:#fbf3d9; --bg:#f5f6f2; --fg:#14202f;
   --good:#1f7a4d; --warn:#9a5b00; --bad:#b42318;
-  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --display:"Bricolage Grotesque","Source Sans 3",system-ui,sans-serif;
   --body:"Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
 }
 *{box-sizing:border-box}
@@ -30,3 +30,10 @@ button:focus-visible,input:focus-visible,a:focus-visible,label:focus-within{outl
 .fine{font-size:14px;color:var(--muted);margin-top:28px}
 @media print{.site-nav,.site-footer,.noprint{display:none!important}body{background:#fff;font-size:14px}.card{border:0;padding:0}}
 input,select{max-width:100%}
+
+/* Version 2 skin (Nov 2026) */
+h1,h2,h3{letter-spacing:-.02em}
+h1{font-weight:700;letter-spacing:-.035em;line-height:1.02}
+.eyebrow{text-transform:none;letter-spacing:0;font-size:15px}
+.card,.callbox{border-radius:22px}
+.btn{border-radius:999px}
